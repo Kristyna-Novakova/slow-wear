@@ -1,0 +1,49 @@
+.section {
+  background-color: #F1F0EF;
+  padding: 50px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  flex: 0 0 33.33%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.image img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.image h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.image-caption {
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* Responzivní styly pro mobilní zařízení */
+
+@media (max-width: 768px) {
+  .image {
+    flex: 0 0 100%;
+  }
+}
