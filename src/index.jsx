@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar/navbar';
 import { MainPage } from './Pages/MainPage/mainpage';
 import { HowItWorks } from './Pages/HowItWorks/howitworks';
 import { CategoryView } from './Pages/Categories/categories';
+import { Footer } from './Components/Footer/footer';
 
 const App = () => {
   return (
@@ -13,9 +14,7 @@ const App = () => {
       <MainPage />
       <HowItWorks />
       <CategoryView />
-      <footer>
-        <p>Czechitas, Digitální akademie: Web</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import logoSW from './img/logoSW.png';
+import logoSW from '../../img/logoSW.png';
 import shoppingCart from './img/shopping-cart.svg';
 import personLogin from './img/person.svg';
 import burgerMenu from './img/burger-menu.svg';
