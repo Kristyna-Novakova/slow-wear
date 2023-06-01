@@ -6,20 +6,20 @@ import { BsFacebook } from 'react-icons/bs';
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
           <img src={logoSW} alt="logo" />
         </div>
-        <div className="footer-text">
-          <h3>O nás</h3>
-          <h3>Registrace</h3>
-          <h3>Help Desk</h3>
+        <ul className="footer-text">
+          <li>O nás</li>
+          <li>Registrace</li>
+          <li>Help Desk</li>
           <div className="social-media">
             <BsInstagram />
             <BsFacebook />
           </div>
-        </div>
+        </ul>
       </div>
       <div className="footer-divider">
         <p>&copy; Slow Wear, Inc. 2023. We love our users.</p>
