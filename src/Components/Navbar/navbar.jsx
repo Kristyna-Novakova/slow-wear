@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 import logoSW from '../../img/logoSW.png';
-import shoppingCart from './img/shopping-cart.svg';
-import personLogin from './img/person.svg';
-import burgerMenu from './img/burger-menu.svg';
+import { BsPerson } from 'react-icons/bs';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { HiOutlineShoppingBag } from 'react-icons/hi';
 
 export const Navbar = () => {
   return (
@@ -14,13 +14,13 @@ export const Navbar = () => {
         </div>
         <ul className="menu">
           <li>
-            <img src={personLogin} alt="login" />
+            <BsPerson />
           </li>
           <li>
-            <img src={shoppingCart} alt="shopping cart" />
+            <HiOutlineShoppingBag />
           </li>
           <li>
-            <img src={burgerMenu} alt="menu" />
+            <AiOutlineMenu />
           </li>
         </ul>
       </div>
