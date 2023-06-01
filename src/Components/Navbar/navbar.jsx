@@ -7,16 +7,22 @@ import burgerMenu from './img/burger-menu.svg';
 
 export const Navbar = () => {
   return (
-    <header>
+    <header className="header-container">
       <div className="navbar">
         <div className="logo">
           <img src={logoSW} alt="logo" />
         </div>
-        <div className="icons">
-          <img src={personLogin} alt="login" />
-          <img src={shoppingCart} alt="shopping cart" />
-          <img src={burgerMenu} alt="menu" />
-        </div>
+        <ul className="menu">
+          <li>
+            <img src={personLogin} alt="login" />
+          </li>
+          <li>
+            <img src={shoppingCart} alt="shopping cart" />
+          </li>
+          <li>
+            <img src={burgerMenu} alt="menu" />
+          </li>
+        </ul>
       </div>
     </header>
   );
