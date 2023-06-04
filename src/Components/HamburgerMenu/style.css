@@ -5,8 +5,8 @@
   background-color: #F1F0EF;
   padding: 1rem;
   display: none;
-  width: 20vw;
-  height: 55vh;
+  width: 25vw;
+  height: 65vh;
   display: block;
 
 }
@@ -38,10 +38,15 @@
 @media (max-width: 768px) {
   .menu-items {
     width: 100vw;
-    height: 50vh;
   }
 
   .menu-items li {
     font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .menu-items {
+    width: 40vw;
   }
 }
