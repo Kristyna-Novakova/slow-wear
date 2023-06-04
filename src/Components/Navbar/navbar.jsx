@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import logoSW from '../../img/logoSW.png';
 import { BsPerson } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
+import { RxCross1 } from 'react-icons/rx';
+import { HamburgerMenu } from '../HamburgerMenu/hamburgerMenu';
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="header-container">
       <div className="navbar">
@@ -19,10 +27,14 @@ export const Navbar = () => {
           <li>
             <HiOutlineShoppingBag />
           </li>
-          <li>
-            <AiOutlineMenu />
+          <li
+            className={`hamburger-menu ${isMenuOpen} ? "" : "close"`}
+            onClick={handleMenuToggle}
+          >
+            {isMenuOpen ? <RxCross1 /> : <AiOutlineMenu />}
           </li>
         </ul>
+        {isMenuOpen && <HamburgerMenu />}
       </div>
     </header>
   );
