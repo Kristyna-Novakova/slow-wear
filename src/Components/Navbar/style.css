@@ -39,6 +39,10 @@
   color: #6D574A;
 }
 
+.close {
+  display: none;
+}
+
 /* Responsive Design */
 
 @media (max-width: 768px) {

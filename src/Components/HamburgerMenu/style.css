@@ -4,9 +4,9 @@
   right: 0;
   background-color: #F1F0EF;
   padding: 1rem;
+  padding-bottom: 1.5rem;
   display: none;
   width: 25vw;
-  height: 65vh;
   display: block;
 
 }
@@ -32,6 +32,15 @@
   display: none;
 }
 
+.categories-menu {
+  height: 100%;
+  cursor: pointer;
+}
+
+.categories-list li {
+  font-size: 13px;
+}
+
 
 /* Responsive Design */
 
@@ -42,6 +51,10 @@
 
   .menu-items li {
     font-size: 15px;
+  }
+
+  .categories-list li {
+    font-size: 13px;
   }
 }
 
