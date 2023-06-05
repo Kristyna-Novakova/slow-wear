@@ -1,9 +1,5 @@
 import React from 'react';
 import './style.css';
-import tshirts from './img/tshirts.jpg';
-import jeans from './img/jeans.jpg';
-import dress from './img/dress.jpg';
-import jackets from './img/jackets.jpg';
 
 export const CategoryView = () => {
   return (
@@ -18,10 +14,18 @@ export const CategoryView = () => {
           </p>
         </div>
         <div className="category-view-photos">
-          <img src={tshirts} alt="Top" />
-          <img src={jeans} alt="Džíny" />
-          <img src={dress} alt="Šaty" />
-          <img src={jackets} alt="Bunda" />
+          <div className="category-image category-image-tshirts">
+            <h3>Topy</h3>
+          </div>
+          <div className="category-image category-image-jeans">
+            <h3>Džíny</h3>
+          </div>
+          <div className="category-image category-image-dress">
+            <h3>Šaty</h3>
+          </div>
+          <div className="category-image category-image-jackets">
+            <h3>Bundy</h3>
+          </div>
         </div>
       </div>
     </section>
