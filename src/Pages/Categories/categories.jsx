@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import { Button } from '../../Components/Button/button';
 
 export const CategoryView = () => {
   return (
@@ -12,7 +13,9 @@ export const CategoryView = () => {
             nejenom vypadá dobře, ale také pomáhá naší planetě. Děkujeme, že jsi
             součástí, a doufáme, že ti nabídka přinese radost.
           </p>
+          <Button text="Objev více" />
         </div>
+
         <div className="category-view-photos">
           <div className="category-image category-image-tshirts">
             <h3>Topy</h3>

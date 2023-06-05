@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   padding: 120px 60px;
+  padding-bottom: 80px;
 }
 
 .category-view-text h2 {
@@ -24,8 +25,12 @@
 
 .category-view-text p {
   width: 50%;
+  padding-bottom: 80px;
 }
 
+
+
+/* Category Photos */
 .category-view-photos {
   flex: 0 0 50%;
   display: flex;
@@ -68,10 +73,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
 }
 
 .category-image:hover h3 {
   display: block;
+  transition: 0.5s;
 }
 
 .category-image-tshirts {
