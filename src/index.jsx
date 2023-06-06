@@ -6,7 +6,6 @@ import { MainPage } from './Pages/MainPage/mainPage';
 import { HowItWorks } from './Pages/HowItWorks/howItWorks';
 import { CategoryView } from './Pages/CategoryView/categoryView';
 import { Footer } from './Components/Footer/footer';
-import { CategoryPage } from './Pages/CategoryPage/categoryPage';
 
 const App = () => {
   return (
@@ -15,7 +14,6 @@ const App = () => {
       <MainPage />
       <HowItWorks />
       <CategoryView />
-      <CategoryPage />
       <Footer />
     </div>
   );
