@@ -1,11 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
-import { Navbar } from './components/Navbar/navbar';
-import { MainPage } from './Pages/MainPage/mainPage';
-import { HowItWorks } from './Pages/HowItWorks/howItWorks';
-import { CategoryView } from './Pages/CategoryView/categoryView';
-import { Footer } from './Components/Footer/footer';
+import { Navbar } from './Components/Navbar/Navbar';
+import { MainPage } from './Pages/MainPage/MainPage';
+import { HowItWorks } from './Pages/HowItWorks/HowItWorks';
+import { CategoryView } from './Pages/CategoryView/CategoryView';
+import { Footer } from './Components/Footer/Footer';
 
 const App = () => {
   return (
