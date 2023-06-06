@@ -13,7 +13,9 @@ export const HamburgerMenu = () => {
       <ul>
         <li
           onClick={handleCategoriesList}
-          className={`categories-menu ${openCategories} ? "" : "close"`}
+          className={
+            { openCategories } ? 'categories-menu' : 'categories-menu close'
+          }
         >
           Kategorie
         </li>

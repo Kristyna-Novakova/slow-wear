@@ -27,10 +27,7 @@ export const Navbar = () => {
           <li>
             <HiOutlineShoppingBag />
           </li>
-          <li
-            className={`hamburger-menu ${isMenuOpen} ? "" : "close"`}
-            onClick={handleMenuToggle}
-          >
+          <li className={`hamburger-menu`} onClick={handleMenuToggle}>
             {isMenuOpen ? <RxCross1 /> : <AiOutlineMenu />}
           </li>
         </ul>
