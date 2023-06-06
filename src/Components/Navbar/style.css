@@ -39,6 +39,10 @@
   color: #6D574A;
 }
 
+.menu svg {
+  cursor: pointer;
+}
+
 .close {
   display: none;
 }
