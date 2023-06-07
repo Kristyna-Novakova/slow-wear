@@ -5,7 +5,7 @@ import { BsPerson } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { RxCross1 } from 'react-icons/rx';
-import { HamburgerMenu } from '../HamburgerMenu/hamburgerMenu';
+import { HamburgerMenu } from '../HamburgerMenu/HamburgerMenu';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

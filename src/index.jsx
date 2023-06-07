@@ -5,6 +5,8 @@ import { Navbar } from './Components/Navbar/Navbar';
 import { MainPage } from './Pages/MainPage/MainPage';
 import { HowItWorks } from './Pages/HowItWorks/HowItWorks';
 import { CategoryView } from './Pages/CategoryView/CategoryView';
+import { CategoryPage } from './Pages/CategoryPage/categoryPage';
+import { ProductDetail } from './Pages/ProductDetail/ProductDetail';
 import { Footer } from './Components/Footer/Footer';
 
 const App = () => {
@@ -14,6 +16,8 @@ const App = () => {
       <MainPage />
       <HowItWorks />
       <CategoryView />
+      <CategoryPage />
+      <ProductDetail />
       <Footer />
     </div>
   );

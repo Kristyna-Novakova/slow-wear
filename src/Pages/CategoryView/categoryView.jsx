@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { Button } from '../../Components/Button/button';
+import { Button } from '../../Components/Button/Button';
 
 export const CategoryView = () => {
   return (
