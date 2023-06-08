@@ -22,7 +22,7 @@
 }
 
 .item-image {
-  width: 120px;
+  width: 200px;
   margin-left: 30px;
 }
 
@@ -52,6 +52,7 @@
   padding: 6px 12px;
   border-radius: 50px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .cart-summary {
@@ -62,7 +63,7 @@
 }
 
 .summary-title {
-  font-size: 19px;
+  font-size: 18px;
   margin: 10px 0;
   text-transform: uppercase;
 }
@@ -74,4 +75,15 @@
 .cart-actions {
   margin-top: 20px;
   text-align: center;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .item-image {
+    width: 140px;
+    margin-left: 0;
+  }
+
 }
