@@ -7,6 +7,7 @@ import { HowItWorks } from './Pages/HowItWorks/HowItWorks';
 import { CategoryView } from './Pages/CategoryView/CategoryView';
 import { CategoryPage } from './Pages/CategoryPage/categoryPage';
 import { ProductDetail } from './Pages/ProductDetail/ProductDetail';
+import { ShoppingCart } from './Pages/ShoppingCart/ShoppingCart';
 import { Footer } from './Components/Footer/Footer';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
       <CategoryView />
       <CategoryPage />
       <ProductDetail />
+      <ShoppingCart />
       <Footer />
     </div>
   );
