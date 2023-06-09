@@ -16,7 +16,8 @@
   margin: 0;
 }
 
-.menu-items li {
+.menu-items li,
+.menu-items a {
   list-style: none;
   font-size: 15px;
   text-align: center;
@@ -25,7 +26,13 @@
   padding: 20px 0;
   margin: 10px 15px;
   border-bottom: 1px solid #cfc4c4;
+  text-decoration: none;
 
+}
+
+.menu-items a {
+  display: block;
+  color: #555;
 }
 
 .close {

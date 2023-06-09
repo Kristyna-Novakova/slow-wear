@@ -4,9 +4,13 @@ import step1 from './img/step1.png';
 import step2 from './img/step2.png';
 import step3 from './img/step3.png';
 
-export const HowItWorks = () => {
+export const HowItWorks = ({ sectionRef }) => {
   return (
-    <section className="section align-center-content">
+    <section
+      id="how-it-works"
+      ref={sectionRef}
+      className="section align-center-content"
+    >
       <div>
         <h2 className="section-title">Jak to funguje</h2>
         <div className="image-container">

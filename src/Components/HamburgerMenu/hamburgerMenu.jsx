@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 export const HamburgerMenu = () => {
   const [openCategories, setOpenCategories] = useState(false);
@@ -29,7 +30,9 @@ export const HamburgerMenu = () => {
             </ul>
           </div>
         )}
-        <li>Jak to funguje</li>
+        <Link to="/jaktofunguje" className="categories-menu">
+          Jak to funguje
+        </Link>
         <li>Přihlášení</li>
         <li>Moje objednávky</li>
       </ul>
