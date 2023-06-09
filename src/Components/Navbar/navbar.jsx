@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 import logoSW from '../../img/logoSW.png';
 import { BsPerson } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
@@ -18,7 +19,9 @@ export const Navbar = () => {
     <header className="header-container">
       <div className="navbar">
         <div className="logo">
-          <img src={logoSW} alt="logo" />
+          <Link to="/">
+            <img src={logoSW} alt="logo" />
+          </Link>
         </div>
         <ul className="menu">
           <li>
