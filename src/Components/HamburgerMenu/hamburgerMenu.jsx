@@ -23,10 +23,10 @@ export const HamburgerMenu = () => {
         {openCategories && (
           <div className="categories-list">
             <ul>
-              <li>Topy</li>
-              <li>Džíny</li>
-              <li>Šaty</li>
-              <li>Bundy</li>
+              <Link to="/kategorie/topy">Topy</Link>
+              <Link to="/kategorie/džíny">Džíny</Link>
+              <Link to="/kategorie/šaty">Šaty</Link>
+              <Link to="/kategorie/bundy">Bundy</Link>
             </ul>
           </div>
         )}

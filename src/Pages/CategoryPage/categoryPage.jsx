@@ -1,30 +1,34 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import './style.css';
-import top1 from '../../img/top1.png';
-import top2 from '../../img/top2.png';
-import top3 from '../../img/top3.png';
+import jsonData from '../../categories.json';
 
 export const CategoryPage = () => {
+  console.log('Data', jsonData);
+  const { category } = useParams();
+  const categoryData = jsonData.categories.find(
+    (categoryObj) => categoryObj.category === category,
+  );
+
+  // if (!categoryData) {
+  //   return <p>Kategorie nenalezena.</p>;
+  // }
+
   return (
     <section className="section align-center-content">
       <div>
-        <h2 className="section-title">Topy</h2>
+        <h2 className="section-title">{category}</h2>
         <div className="category-image-container">
-          <div className="category-image-detail">
-            <img src={top1} alt="Obrázek 1" />
-            <h3>Tričko s potiskem</h3>
-            <p className="image-caption">100 CZK</p>
-          </div>
-          <div className="category-image-detail">
-            <img src={top2} alt="Obrázek 1" />
-            <h3>Tričko s potiskem</h3>
-            <p className="image-caption">100 CZK</p>
-          </div>
-          <div className="category-image-detail">
-            <img src={top3} alt="Obrázek 1" />
-            <h3>Tričko s potiskem</h3>
-            <p className="image-caption">100 CZK</p>
-          </div>
+          {categoryData &&
+            categoryData.products.map((product) => (
+              <div className="category-image-detail" key={product.id}>
+                <img src={`../../${product.url}`} alt={product.name} />
+                <h3>{product.name}</h3>
+                <p className="image-caption">
+                  {product.price} {product.currency}
+                </p>
+              </div>
+            ))}
         </div>
       </div>
     </section>
