@@ -1,46 +1,45 @@
 import React from 'react';
 import './style.css';
-import top1 from '../../img/top1.png';
 import { Button } from '../../Components/Button/Button';
 
 export const ShoppingCart = () => {
   return (
-    <section class="section">
+    <section className="section">
       <div className="cart-section">
-        <h2 class="cart-title">Nákupní košík</h2>
+        <h2 className="cart-title">Nákupní košík</h2>
 
-        <div class="cart-items">
-          <div class="item-image">
-            <img src={top1} alt="Produkt 1" />
+        <div className="cart-items">
+          <div className="item-image">
+            <img src="img/top1.png" alt="Produkt 1" />
           </div>
-          <div class="item-details">
-            <h3 class="item-name">Tričko s potiskem</h3>
-            <p class="item-size">Velikost: M</p>
-            <p class="item-quantity">Množství: 2</p>
-            <p class="item-price">Cena: 200 CZK</p>
-            <button class="remove-button">Odebrat</button>
-          </div>
-        </div>
-
-        <div class="cart-items">
-          <div class="item-image">
-            <img src={top1} alt="Produkt 1" />
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Tričko s potiskem</h3>
-            <p class="item-size">Velikost: M</p>
-            <p class="item-quantity">Množství: 2</p>
-            <p class="item-price">Cena: 200 CZK</p>
-            <button class="remove-button">Odebrat</button>
+          <div className="item-details">
+            <h3 className="item-name">Tričko s potiskem</h3>
+            <p className="item-size">Velikost: M</p>
+            <p className="item-quantity">Množství: 2</p>
+            <p className="item-price">Cena: 200 CZK</p>
+            <button className="remove-button">Odebrat</button>
           </div>
         </div>
 
-        <div class="cart-summary">
-          <h3 class="summary-title">Souhrn objednávky</h3>
-          <p class="summary-total">Celková cena: 800 CZK</p>
+        <div className="cart-items">
+          <div className="item-image">
+            <img src="img/top1.png" alt="Produkt 1" />
+          </div>
+          <div className="item-details">
+            <h3 className="item-name">Tričko s potiskem</h3>
+            <p className="item-size">Velikost: M</p>
+            <p className="item-quantity">Množství: 2</p>
+            <p className="item-price">Cena: 200 CZK</p>
+            <button className="remove-button">Odebrat</button>
+          </div>
         </div>
 
-        <div class="cart-actions">
+        <div className="cart-summary">
+          <h3 className="summary-title">Souhrn objednávky</h3>
+          <p className="summary-total">Celková cena: 800 CZK</p>
+        </div>
+
+        <div className="cart-actions">
           <Button text="Pokračovat k platbě" />
         </div>
       </div>

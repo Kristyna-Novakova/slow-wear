@@ -28,7 +28,9 @@ export const Navbar = () => {
             <BsPerson />
           </li>
           <li>
-            <HiOutlineShoppingBag />
+            <Link to="/kosik">
+              <HiOutlineShoppingBag />
+            </Link>
           </li>
           <li className={`hamburger-menu`} onClick={handleMenuToggle}>
             {isMenuOpen ? <RxCross1 /> : <AiOutlineMenu />}
