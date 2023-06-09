@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import './style.css';
-import top1 from '../../img/top1.png';
 import { Button } from '../../Components/Button/Button';
+import jsonData from '../../categories.json';
 
 export const ProductDetail = () => {
+  const { category, id } = useParams();
+  const categoryData = jsonData.categories.find(
+    (categoryObj) => categoryObj.category === category,
+  );
+  const product = categoryData.products.find((product) => product.id === id);
+
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState('');
   // const [addCart, setAddCart] = useState({
@@ -39,16 +46,14 @@ export const ProductDetail = () => {
     <section className="section">
       <div className="product-page">
         <div className="product-image">
-          <img src={top1} alt="Fotografie tička s popisem" />
+          <img src={`../../${product.url}`} alt="Fotografie tička s popisem" />
         </div>
         <div className="product-content">
-          <h2 className="product-title">Top s potiskem</h2>
-          <p className="product-price">100 CZK</p>
-          <p className="product-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel
-            enim at justo lobortis tincidunt. Sed consequat finibus lectus at
-            vulputate.
+          <h2 className="product-title">{product.name}</h2>
+          <p className="product-price">
+            {product.price} {product.currency}
           </p>
+          <p className="product-description">{product.description}</p>
           <div className="product-sizes">
             <h3>Velikost</h3>
             <div className="select-container">
@@ -56,11 +61,11 @@ export const ProductDetail = () => {
                 className="custom-select"
                 onClick={(e) => setSize(e.target.value)}
               >
-                <option value="XS">XS</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
+                {product.sizes.map((size) => (
+                  <option key={size} value={size}>
+                    {size}
+                  </option>
+                ))}
               </select>
             </div>
           </div>

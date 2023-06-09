@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './style.css';
 import jsonData from '../../categories.json';
 
@@ -10,9 +10,9 @@ export const CategoryPage = () => {
     (categoryObj) => categoryObj.category === category,
   );
 
-  // if (!categoryData) {
-  //   return <p>Kategorie nenalezena.</p>;
-  // }
+  if (!categoryData) {
+    return <p>Kategorie nenalezena.</p>;
+  }
 
   return (
     <section className="section align-center-content">
@@ -22,7 +22,10 @@ export const CategoryPage = () => {
           {categoryData &&
             categoryData.products.map((product) => (
               <div className="category-image-detail" key={product.id}>
-                <img src={`../../${product.url}`} alt={product.name} />
+                <Link to={`/category/${category}/${product.id}`}>
+                  <img src={`../../${product.url}`} alt={product.name} />
+                </Link>
+
                 <h3>{product.name}</h3>
                 <p className="image-caption">
                   {product.price} {product.currency}
