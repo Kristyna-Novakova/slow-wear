@@ -22,18 +22,15 @@ export const ProductDetail = () => {
   // });
 
   const handleDecrementQuantity = () => {
-    setQuantity(quantity - 1);
-    if (quantity <= minQuantity) {
-      setQuantity(minQuantity);
-    }
+    setQuantity((quantity) =>
+      quantity > minQuantity ? quantity - 1 : quantity,
+    );
   };
 
   const handleIncrementQuantity = () => {
-    setQuantity(quantity + 1);
-
-    if (quantity >= maxQuantity) {
-      setQuantity(maxQuantity);
-    }
+    setQuantity((quantity) =>
+      quantity < maxQuantity ? quantity + 1 : quantity,
+    );
   };
 
   const handleQuantityChange = (e) => {
@@ -98,6 +95,7 @@ export const ProductDetail = () => {
               <input
                 type="text"
                 pattern="\d{1,2}"
+                inputMode="numeric"
                 value={quantity}
                 onChange={handleQuantityChange}
               />

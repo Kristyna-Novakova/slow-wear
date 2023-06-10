@@ -12,8 +12,8 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    liveReload: false,
-    hot: false,
+    liveReload: true,
+    hot: 'only',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -38,9 +38,9 @@ module.exports = {
         test: /\.(png|jpe?g|svg|gif)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[name]-[contenthash:6][ext]'
+          filename: 'img/[name]-[contenthash:6][ext]',
         },
-      }
+      },
     ],
   },
   plugins: [
@@ -48,9 +48,7 @@ module.exports = {
       template: 'src/index.html',
     }),
     new CopyPlugin({
-      patterns: [
-        { from: 'public', to: '', noErrorOnMissing: true },
-      ],
+      patterns: [{ from: 'public', to: '', noErrorOnMissing: true }],
     }),
   ],
 };

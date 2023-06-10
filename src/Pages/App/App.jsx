@@ -14,7 +14,7 @@ export const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/jaktofunguje" element={<HowItWorks />} />
+        <Route path="/jak-to-funguje" element={<HowItWorks />} />
         <Route path="/kategorie/:category" element={<CategoryPage />} />
         <Route path="/category/:category/:id" element={<ProductDetail />} />
         <Route path="/kosik" element={<ShoppingCart />} />

@@ -11,33 +11,37 @@ import { HamburgerMenu } from '../HamburgerMenu/HamburgerMenu';
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuToggle = () => {
+  const handleMenuToggle = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="header-container">
-      <div className="navbar">
-        <div className="logo">
-          <Link to="/">
-            <img src={logoSW} alt="logo" />
-          </Link>
-        </div>
-        <ul className="menu">
-          <li>
-            <BsPerson />
-          </li>
-          <li>
-            <Link to="/kosik">
-              <HiOutlineShoppingBag />
+    <>
+      <header className="header-container">
+        <div className="navbar">
+          <div className="logo">
+            <Link to="/">
+              <img src={logoSW} alt="logo" />
             </Link>
-          </li>
-          <li className={`hamburger-menu`} onClick={handleMenuToggle}>
-            {isMenuOpen ? <RxCross1 /> : <AiOutlineMenu />}
-          </li>
-        </ul>
+          </div>
+          <ul className="menu">
+            <li>
+              <BsPerson />
+            </li>
+            <li>
+              <Link to="/kosik">
+                <HiOutlineShoppingBag />
+              </Link>
+            </li>
+            <li className={`hamburger-menu`} onClick={handleMenuToggle}>
+              {isMenuOpen ? <RxCross1 /> : <AiOutlineMenu />}
+            </li>
+          </ul>
+        </div>
         {isMenuOpen && <HamburgerMenu />}
-      </div>
-    </header>
+      </header>
+    </>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
+import { SlArrowDown } from 'react-icons/sl';
 
 export const HamburgerMenu = () => {
   const [openCategories, setOpenCategories] = useState(false);
@@ -18,19 +19,27 @@ export const HamburgerMenu = () => {
             { openCategories } ? 'categories-menu' : 'categories-menu close'
           }
         >
-          Kategorie
+          Kategorie <SlArrowDown className="arrow-icon" />
         </li>
         {openCategories && (
           <div className="categories-list">
             <ul>
-              <Link to="/kategorie/topy">Topy</Link>
-              <Link to="/kategorie/džíny">Džíny</Link>
-              <Link to="/kategorie/šaty">Šaty</Link>
-              <Link to="/kategorie/bundy">Bundy</Link>
+              <li>
+                <Link to="/kategorie/topy">Topy</Link>
+              </li>
+              <li>
+                <Link to="/kategorie/džíny">Džíny</Link>
+              </li>
+              <li>
+                <Link to="/kategorie/šaty">Šaty</Link>
+              </li>
+              <li>
+                <Link to="/kategorie/bundy">Bundy</Link>
+              </li>
             </ul>
           </div>
         )}
-        <Link to="/jaktofunguje" className="categories-menu">
+        <Link to="/jak-to-funguje" className="categories-menu">
           Jak to funguje
         </Link>
         <li>Přihlášení</li>
