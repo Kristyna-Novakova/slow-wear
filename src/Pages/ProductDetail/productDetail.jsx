@@ -4,6 +4,9 @@ import './style.css';
 import { Button } from '../../Components/Button/Button';
 import jsonData from '../../categories.json';
 
+const minQuantity = 1;
+const maxQuantity = 10;
+
 export const ProductDetail = () => {
   const { category, id } = useParams();
   const categoryData = jsonData.categories.find(
@@ -20,16 +23,30 @@ export const ProductDetail = () => {
 
   const handleDecrementQuantity = () => {
     setQuantity(quantity - 1);
-    if (quantity <= 1) {
-      setQuantity(1);
+    if (quantity <= minQuantity) {
+      setQuantity(minQuantity);
     }
   };
 
   const handleIncrementQuantity = () => {
     setQuantity(quantity + 1);
 
-    if (quantity >= 10) {
-      setQuantity(10);
+    if (quantity >= maxQuantity) {
+      setQuantity(maxQuantity);
+    }
+  };
+
+  const handleQuantityChange = (e) => {
+    const valueData = Number(e.target.value);
+
+    if (isNaN(valueData)) {
+      setQuantity(minQuantity);
+    } else if (valueData >= maxQuantity) {
+      setQuantity(maxQuantity);
+    } else if (valueData <= minQuantity) {
+      setQuantity(minQuantity);
+    } else {
+      setQuantity(valueData);
     }
   };
 
@@ -79,13 +96,10 @@ export const ProductDetail = () => {
                 -
               </button>
               <input
-                type="number"
-                min="1"
-                max="10"
+                type="text"
+                pattern="\d{1,2}"
                 value={quantity}
-                onChange={(e) =>
-                  quantity >= 10 ? setQuantity(10) : setQuantity(e.target.value)
-                }
+                onChange={handleQuantityChange}
               />
 
               <button
