@@ -7,9 +7,13 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { RxCross1 } from 'react-icons/rx';
 import { HamburgerMenu } from '../HamburgerMenu/HamburgerMenu';
+import { useShoppingCart } from '../../lib/store';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const totalAmount = useShoppingCart(
+    (shoppingCart) => shoppingCart.cartItems.length,
+  );
 
   const handleMenuToggle = (event) => {
     event.preventDefault();
@@ -38,8 +42,9 @@ export const Navbar = () => {
               <BsPerson />
             </li>
             <li>
-              <Link to="/kosik">
+              <Link to="/kosik" className="cart-container">
                 <HiOutlineShoppingBag />
+                {totalAmount > 0 && <div className="badge">{totalAmount}</div>}
               </Link>
             </li>
             <li className={`hamburger-menu`} onClick={handleMenuToggle}>

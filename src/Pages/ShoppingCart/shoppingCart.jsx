@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
-import { Button } from '../../Components/Button/Button';
+import { Link } from 'react-router-dom';
+import { Button } from '../../components/Button/Button';
 import { useShoppingCart, useCatalogue } from '../../lib/store';
 
 export const ShoppingCart = () => {
@@ -25,7 +26,7 @@ export const ShoppingCart = () => {
             const product = findProduct(item);
 
             return (
-              <li className="cart-item" key={item.productId + product.size}>
+              <li className="cart-item" key={item.productId + item.size}>
                 <div className="item-image">
                   <img
                     src={`/img/products/${product.url}`}
@@ -61,7 +62,9 @@ export const ShoppingCart = () => {
         </div>
 
         <div className="cart-actions">
-          <Button text="Pokračovat k platbě" />
+          <Link to="/platba">
+            <Button text="Pokračovat k platbě" />
+          </Link>
         </div>
       </div>
     </section>

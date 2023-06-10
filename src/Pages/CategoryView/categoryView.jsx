@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
-import { Button } from '../../Components/Button/Button';
+import { Button } from '../../components/Button/Button';
 import { useCatalogue } from '../../lib/store';
 
 export const CategoryView = () => {

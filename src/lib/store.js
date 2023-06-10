@@ -1,22 +1,25 @@
 import { create } from 'zustand';
 import jsonData from '../categories.json';
 
+const findProduct = (cartItems, categoryId, productId, size) =>
+  cartItems.find(
+    (item) =>
+      item.categoryId === categoryId &&
+      item.productId === productId &&
+      (!size || item.size === size),
+  );
+
+const findProductIndex = (cartItems, categoryId, productId, size) =>
+  cartItems.findIndex(
+    (item) =>
+      item.categoryId === categoryId &&
+      item.productId === productId &&
+      item.size === size,
+  );
+
 export const useCatalogue = create((set) => jsonData);
 export const useShoppingCart = create((set, get) => ({
-  cartItems: [
-    {
-      categoryId: 'topy',
-      productId: '01',
-      size: 'S',
-      quantity: 3,
-    },
-    {
-      categoryId: 'topy',
-      productId: '02',
-      size: 'L',
-      quantity: 1,
-    },
-  ],
+  cartItems: [],
   addToCart: ({ categoryId, productId, size, quantity }) =>
     set((prevState) => {
       const newCartItems = [...prevState.cartItems];
@@ -71,19 +74,3 @@ export const useShoppingCart = create((set, get) => ({
     findProduct(get().cartItems, categoryId, productId, size),
   getProductsAmount: () => get().cartItems.length,
 }));
-
-const findProduct = (cartItems, categoryId, productId, size) =>
-  cartItems.find(
-    (item) =>
-      item.categoryId === categoryId &&
-      item.productId === productId &&
-      item.size === size,
-  );
-
-const findProductIndex = (cartItems, categoryId, productId, size) =>
-  cartItems.findIndex(
-    (item) =>
-      item.categoryId === categoryId &&
-      item.productId === productId &&
-      item.size === size,
-  );

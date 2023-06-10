@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './style.css';
-import { Button } from '../../Components/Button/Button';
-import { useCatalogue } from '../../lib/store';
+import { Button } from '../../components/Button/Button';
+import { useCatalogue, useShoppingCart } from '../../lib/store';
 
 const minQuantity = 1;
 const maxQuantity = 10;
@@ -10,6 +10,7 @@ const maxQuantity = 10;
 export const ProductDetail = () => {
   const { categoryId, productId } = useParams();
   const catalogue = useCatalogue();
+  const { addToCart, getProduct } = useShoppingCart();
 
   if (!catalogue) {
     return <p>Data se načítají.</p>;
@@ -17,8 +18,23 @@ export const ProductDetail = () => {
 
   const product = catalogue[categoryId].products[productId];
 
-  const [quantity, setQuantity] = useState(1);
-  const [size, setSize] = useState('');
+  const [size, setSize] = useState(() => {
+    const cartItem = getProduct({ categoryId, productId });
+
+    if (cartItem) {
+      return cartItem.size;
+    }
+    return product.sizes[0];
+  });
+
+  const [quantity, setQuantity] = useState(() => {
+    const product = getProduct({ categoryId, productId, size });
+
+    if (product) {
+      return product.quantity;
+    }
+    return 1;
+  });
 
   const handleDecrementQuantity = () => {
     setQuantity((quantity) =>
@@ -46,6 +62,16 @@ export const ProductDetail = () => {
     }
   };
 
+  const handleChangeSize = (e) => {
+    const newSize = e.target.value;
+    setSize(newSize);
+    const product = getProduct({ categoryId, productId, size: newSize });
+
+    if (product) {
+      setQuantity(product.quantity);
+    }
+  };
+
   return (
     <section className="section">
       <div className="product-page">
@@ -62,8 +88,9 @@ export const ProductDetail = () => {
             <h3>Velikost</h3>
             <div className="select-container">
               <select
+                value={size}
                 className="custom-select"
-                onClick={(e) => setSize(e.target.value)}
+                onChange={handleChangeSize}
               >
                 {product.sizes.map((size) => (
                   <option key={size} value={size}>
@@ -98,7 +125,10 @@ export const ProductDetail = () => {
               </button>
             </div>
           </div>
-          <Button text="Přidat do košíku" />
+          <Button
+            text="Přidat do košíku"
+            onClick={() => addToCart({ categoryId, productId, size, quantity })}
+          />
         </div>
       </div>
     </section>

@@ -1,0 +1,18 @@
+.payment-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.qr-code {
+  width: 100px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
