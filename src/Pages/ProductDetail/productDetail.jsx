@@ -73,7 +73,7 @@ export const ProductDetail = () => {
   };
 
   return (
-    <section className="section">
+    <section className="product-section">
       <div className="product-page">
         <div className="product-image">
           <img src={`/img/products/${product.url}`} alt={product.name} />

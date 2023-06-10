@@ -18,7 +18,7 @@ export const CategoryPage = () => {
   }
 
   return (
-    <section className="section align-center-content">
+    <section className="category-section align-center-content">
       <div>
         <h2 className="section-title">{categoryData.title}</h2>
         <div className="category-image-container">
