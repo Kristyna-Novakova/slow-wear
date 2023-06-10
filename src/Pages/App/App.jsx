@@ -17,7 +17,7 @@ export const App = () => {
         <Route path="/jak-to-funguje" element={<HowItWorks />} />
         <Route path="/kategorie/:categoryId" element={<CategoryPage />} />
         <Route
-          path="/category/:categoryId/:productId"
+          path="/kategorie/:categoryId/:productId"
           element={<ProductDetail />}
         />
         <Route path="/kosik" element={<ShoppingCart />} />

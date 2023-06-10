@@ -9,6 +9,7 @@
   z-index: 110;
   border-radius: 0 0 10px 10px;
   box-shadow: -8px 11px 18px -7px rgb(160, 160, 160);
+  user-select: none;
 }
 
 .menu-items ul {

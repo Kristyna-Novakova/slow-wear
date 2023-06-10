@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './style.css';
-import { useCatalaogue } from '../../lib/store';
+import { useCatalogue } from '../../lib/store';
 
 export const CategoryPage = () => {
-  const catalogue = useCatalaogue();
+  const catalogue = useCatalogue();
   const { categoryId } = useParams();
 
   if (!catalogue) {
@@ -26,7 +26,7 @@ export const CategoryPage = () => {
             Object.entries(categoryData.products).map(
               ([productId, product]) => (
                 <div className="category-image-detail" key={productId}>
-                  <Link to={`/category/${categoryId}/${productId}`}>
+                  <Link to={`/kategorie/${categoryId}/${productId}`}>
                     <img
                       src={`/img/products/${product.url}`}
                       alt={product.name}

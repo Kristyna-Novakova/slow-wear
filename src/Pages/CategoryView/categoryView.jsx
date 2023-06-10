@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 import { Button } from '../../Components/Button/Button';
-import { useCatalaogue } from '../../lib/store';
+import { useCatalogue } from '../../lib/store';
 
 export const CategoryView = () => {
-  const catalogue = useCatalaogue();
+  const catalogue = useCatalogue();
 
   return (
     <section>
@@ -24,6 +24,7 @@ export const CategoryView = () => {
           <div className="category-view-photos">
             {Object.keys(catalogue).map((categoryId) => (
               <Link
+                key={categoryId}
                 to={`/kategorie/${categoryId}`}
                 className="category-image"
                 style={{

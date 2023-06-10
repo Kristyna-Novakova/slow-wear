@@ -10,7 +10,7 @@
   text-transform: uppercase;
 }
 
-.cart-items {
+.cart-item {
   display: flex;
   flex-direction: row;
   gap: 20px;

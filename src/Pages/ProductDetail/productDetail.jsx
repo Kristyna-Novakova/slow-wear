@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './style.css';
 import { Button } from '../../Components/Button/Button';
-import { useCatalaogue } from '../../lib/store';
+import { useCatalogue } from '../../lib/store';
 
 const minQuantity = 1;
 const maxQuantity = 10;
 
 export const ProductDetail = () => {
   const { categoryId, productId } = useParams();
-  const catalogue = useCatalaogue();
+  const catalogue = useCatalogue();
 
   if (!catalogue) {
     return <p>Data se načítají.</p>;

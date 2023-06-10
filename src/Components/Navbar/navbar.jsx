@@ -14,6 +14,13 @@ export const Navbar = () => {
   const handleMenuToggle = (event) => {
     event.preventDefault();
     event.stopPropagation();
+
+    if (!isMenuOpen) {
+      window.addEventListener('click', () => setIsMenuOpen(false), {
+        once: true,
+      });
+    }
+
     setIsMenuOpen(!isMenuOpen);
   };
 

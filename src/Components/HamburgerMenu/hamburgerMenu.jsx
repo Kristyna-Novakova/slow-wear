@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
 import { SlArrowDown } from 'react-icons/sl';
-import { useCatalaogue } from '../../lib/store';
+import { useCatalogue } from '../../lib/store';
 
 export const HamburgerMenu = () => {
   const [openCategories, setOpenCategories] = useState(false);
-  const catalogue = useCatalaogue();
+  const catalogue = useCatalogue();
 
-  const handleCategoriesList = () => {
+  const handleCategoriesList = (event) => {
+    event.stopPropagation();
     setOpenCategories(!openCategories);
   };
 
@@ -29,7 +30,7 @@ export const HamburgerMenu = () => {
           <div className="categories-list">
             <ul>
               {Object.keys(catalogue).map((categoryId) => (
-                <li>
+                <li key={categoryId}>
                   <Link to={`/kategorie/${categoryId}`}>
                     {catalogue[categoryId].title}
                   </Link>
