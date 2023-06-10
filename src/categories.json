@@ -1,132 +1,119 @@
 {
-  "categories": [
-    {
-      "category": "topy",
-      "products": [
-        {
-          "id": "01",
-          "name": "Bílé triko s potiskem",
-          "url": "img/top1.png",
-          "price": 100,
-          "currency": "Kč",
-          "description": "Bílé triko s moderním potiskem.",
-          "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL"]
-        },
-        {
-          "id": "02",
-          "name": "Bílá halenka",
-          "url": "img/top2.png",
-          "price": 110,
-          "currency": "Kč",
-          "description": "Bílá elegantní halenka s nařasenými rukávy.",
-          "sizes": ["XS", "S", "M", "L"]
-        },
-        {
-          "id": "03",
-          "name": "Béžové basic triko",
-          "url": "img/top3.png",
-          "price": 90,
-          "currency": "Kč",
-          "description": "Basic bavlněné triko v béžové barvě.",
-          "sizes": ["S", "M", "L", "XL"]
-        }
-      ]
-    },
-    {
-      "category": "džíny",
-      "products": [
-        {
-          "id": "04",
-          "name": "Džíny střihu mom",
-          "url": "img/jeans1.png",
-          "price": 200,
-          "currency": "Kč",
-          "description": "Volné mom džíny s used lookem.",
-          "sizes": ["S", "M", "L", "XL"]
-        },
-        {
-          "id": "05",
-          "name": "Džíny s vysokým pasem",
-          "url": "img/jeans2.png",
-          "price": 220,
-          "currency": "Kč",
-          "description": "Džíny s moderním vysokým pasem.",
-          "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL"]
-        },
-        {
-          "id": "06",
-          "name": "Džíny straight high rise",
-          "url": "img/jeans3.png",
-          "price": 250,
-          "currency": "Kč",
-          "description": "Pohodlný straight střih. Široké a delší nohavice bez zapošití.",
-          "sizes": ["XS", "S", "M", "L", "XL"]
-        }
-      ]
-    },
-    {
-      "category": "šaty",
-      "products": [
-        {
-          "id": "07",
-          "name": "Šaty s balonovými rukávy",
-          "url": "img/dress1.png",
-          "price": 250,
-          "currency": "Kč",
-          "description": "Vzdušné šaty s volánovým lemem a strukturovnaou látkou.",
-          "sizes": ["S", "M", "L", "XL"]
-        },
-        {
-          "id": "08",
-          "name": "Letní šaty",
-          "url": "img/dress2.png",
-          "price": 230,
-          "currency": "Kč",
-          "description": "Lehké a vzdušné letní šaty pro horké dny.",
-          "sizes": ["S", "M", "L", "XL", "2XL"]
-        },
-        {
-          "id": "09",
-          "name": "Maxi šaty",
-          "url": "img/dress3.png",
-          "price": 200,
-          "currency": "Kč",
-          "description": "Dlouhé a pohodlné maxi šaty.",
-          "sizes": ["XS", "S", "M", "L"]
-        }
-      ]
-    },
-    {
-      "category": "bundy",
-      "products": [
-        {
-          "id": "10",
-          "name": "Bunda s kapucí",
-          "url": "img/jacket1.png",
-          "price": 350,
-          "currency": "Kč",
-          "description": "Teplá bunda s kapucí pro zimní měsíce.",
-          "sizes": ["S", "M", "L", "XL", "2XL", "3XL"]
-        },
-        {
-          "id": "11",
-          "name": "Khaki lehká bunda",
-          "url": "img/jacket2.png",
-          "price": 300,
-          "currency": "Kč",
-          "description": "Podzimní bunda. Regular fit, dlouhý rukáv.",
-          "sizes": ["S", "M", "L", "XL", "2XL", "3XL"]
-        },
-        {
-          "id": "12",
-          "name": "Džínová bunda",
-          "url": "img/jacket3.png",
-          "price": 320,
-          "currency": "Kč",
-          "description": "Světle modrá džíska má dvě náprsní kapsy, které mají klopu na knoflík.",
-          "sizes": ["S", "M", "L", "XL", "2XL", "3XL"]
-        }
-      ]
+  "topy": {
+    "title": "Topy",
+    "products": {
+      "01": {
+        "name": "Bílé triko s potiskem",
+        "url": "img/top1.png",
+        "price": 100,
+        "currency": "Kč",
+        "description": "Bílé triko s moderním potiskem.",
+        "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL"]
+      },
+      "02": {
+        "name": "Bílá halenka",
+        "url": "img/top2.png",
+        "price": 110,
+        "currency": "Kč",
+        "description": "Bílá elegantní halenka s nařasenými rukávy.",
+        "sizes": ["XS", "S", "M", "L"]
+      },
+      "03": {
+        "name": "Béžové basic triko",
+        "url": "img/top3.png",
+        "price": 90,
+        "currency": "Kč",
+        "description": "Basic bavlněné triko v béžové barvě.",
+        "sizes": ["S", "M", "L", "XL"]
+      }
     }
-  ]
+  },
+
+  "dziny": {
+    "title": "Džíny",
+    "products": {
+      "04": {
+        "name": "Džíny střihu mom",
+        "url": "img/jeans1.png",
+        "price": 200,
+        "currency": "Kč",
+        "description": "Volné mom džíny s used lookem.",
+        "sizes": ["S", "M", "L", "XL"]
+      },
+      "05": {
+        "name": "Džíny s vysokým pasem",
+        "url": "img/jeans2.png",
+        "price": 220,
+        "currency": "Kč",
+        "description": "Džíny s moderním vysokým pasem.",
+        "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL"]
+      },
+      "06": {
+        "name": "Džíny straight high rise",
+        "url": "img/jeans3.png",
+        "price": 250,
+        "currency": "Kč",
+        "description": "Pohodlný straight střih. Široké a delší nohavice bez zapošití.",
+        "sizes": ["XS", "S", "M", "L", "XL"]
+      }
+    }
+  },
+  "saty": {
+    "title": "Šaty",
+    "products": {
+      "07": {
+        "name": "Šaty s balonovými rukávy",
+        "url": "img/dress1.png",
+        "price": 250,
+        "currency": "Kč",
+        "description": "Vzdušné šaty s volánovým lemem a strukturovnaou látkou.",
+        "sizes": ["S", "M", "L", "XL"]
+      },
+      "08": {
+        "name": "Letní šaty",
+        "url": "img/dress2.png",
+        "price": 230,
+        "currency": "Kč",
+        "description": "Lehké a vzdušné letní šaty pro horké dny.",
+        "sizes": ["S", "M", "L", "XL", "2XL"]
+      },
+      "09": {
+        "name": "Maxi šaty",
+        "url": "img/dress3.png",
+        "price": 200,
+        "currency": "Kč",
+        "description": "Dlouhé a pohodlné maxi šaty.",
+        "sizes": ["XS", "S", "M", "L"]
+      }
+    }
+  },
+  "bundy": {
+    "title": "Bundy",
+    "products": {
+      "10": {
+        "name": "Bunda s kapucí",
+        "url": "img/jacket1.png",
+        "price": 350,
+        "currency": "Kč",
+        "description": "Teplá bunda s kapucí pro zimní měsíce.",
+        "sizes": ["S", "M", "L", "XL", "2XL", "3XL"]
+      },
+      "11": {
+        "name": "Khaki lehká bunda",
+        "url": "img/jacket2.png",
+        "price": 300,
+        "currency": "Kč",
+        "description": "Podzimní bunda. Regular fit, dlouhý rukáv.",
+        "sizes": ["S", "M", "L", "XL", "2XL", "3XL"]
+      },
+      "12": {
+        "name": "Džínová bunda",
+        "url": "img/jacket3.png",
+        "price": 320,
+        "currency": "Kč",
+        "description": "Světle modrá džíska má dvě náprsní kapsy, které mají klopu na knoflík.",
+        "sizes": ["S", "M", "L", "XL", "2XL", "3XL"]
+      }
+    }
+  }
 }

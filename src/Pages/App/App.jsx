@@ -15,8 +15,11 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/jak-to-funguje" element={<HowItWorks />} />
-        <Route path="/kategorie/:category" element={<CategoryPage />} />
-        <Route path="/category/:category/:id" element={<ProductDetail />} />
+        <Route path="/kategorie/:categoryId" element={<CategoryPage />} />
+        <Route
+          path="/category/:categoryId/:productId"
+          element={<ProductDetail />}
+        />
         <Route path="/kosik" element={<ShoppingCart />} />
       </Routes>
       <Footer />

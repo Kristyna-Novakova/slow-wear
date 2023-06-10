@@ -2,24 +2,23 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './style.css';
 import { Button } from '../../Components/Button/Button';
-import jsonData from '../../categories.json';
+import { useCatalaogue } from '../../lib/store';
 
 const minQuantity = 1;
 const maxQuantity = 10;
 
 export const ProductDetail = () => {
-  const { category, id } = useParams();
-  const categoryData = jsonData.categories.find(
-    (categoryObj) => categoryObj.category === category,
-  );
-  const product = categoryData.products.find((product) => product.id === id);
+  const { categoryId, productId } = useParams();
+  const catalogue = useCatalaogue();
+
+  if (!catalogue) {
+    return <p>Data se načítají.</p>;
+  }
+
+  const product = catalogue[categoryId][productId];
 
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState('');
-  // const [addCart, setAddCart] = useState({
-  //   quantity: quantity,
-  //   size: size,
-  // });
 
   const handleDecrementQuantity = () => {
     setQuantity((quantity) =>
@@ -46,15 +45,6 @@ export const ProductDetail = () => {
       setQuantity(valueData);
     }
   };
-
-  // const handleAddCart = () => {
-  //   setAddCart({
-  //     quantity: quantity,
-  //     size: size,
-  //   });
-  //   console.log(addCart);
-  //   console.log('Test');
-  // };
 
   return (
     <section className="section">

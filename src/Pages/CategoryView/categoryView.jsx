@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 import { Button } from '../../Components/Button/Button';
+import { useCatalaogue } from '../../lib/store';
 
 export const CategoryView = () => {
+  const catalogue = useCatalaogue();
+
   return (
     <section>
       <div className="category-view-container align-center-content">
@@ -17,32 +20,21 @@ export const CategoryView = () => {
           <Button text="Objev více" />
         </div>
 
-        <div className="category-view-photos">
-          <Link
-            to="/kategorie/topy"
-            className="category-image category-image-tshirts"
-          >
-            <h3>Topy</h3>
-          </Link>
-          <Link
-            to="/kategorie/džíny"
-            className="category-image category-image-jeans"
-          >
-            <h3>Džíny</h3>
-          </Link>
-          <Link
-            to="/kategorie/šaty"
-            className="category-image category-image-dress"
-          >
-            <h3>Šaty</h3>
-          </Link>
-          <Link
-            to="/kategorie/bundy"
-            className="category-image category-image-jackets"
-          >
-            <h3>Bundy</h3>
-          </Link>
-        </div>
+        {catalogue && (
+          <div className="category-view-photos">
+            {Object.keys(catalogue).map((categoryId) => (
+              <Link
+                to={`/kategorie/${categoryId}`}
+                className="category-image"
+                style={{
+                  backgroundImage: `url(/img/categories/${categoryId}.jpg)`,
+                }}
+              >
+                <h3>{catalogue[categoryId].title}</h3>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

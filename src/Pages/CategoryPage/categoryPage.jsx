@@ -1,14 +1,17 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './style.css';
-import jsonData from '../../categories.json';
+import { useCatalaogue } from '../../lib/store';
 
 export const CategoryPage = () => {
-  console.log('Data', jsonData);
-  const { category } = useParams();
-  const categoryData = jsonData.categories.find(
-    (categoryObj) => categoryObj.category === category,
-  );
+  const catalogue = useCatalaogue();
+  const { categoryId } = useParams();
+
+  if (!catalogue) {
+    return <p>Data se načítají.</p>;
+  }
+
+  const categoryData = catalogue[categoryId];
 
   if (!categoryData) {
     return <p>Kategorie nenalezena.</p>;
@@ -17,7 +20,7 @@ export const CategoryPage = () => {
   return (
     <section className="section align-center-content">
       <div>
-        <h2 className="section-title">{category}</h2>
+        <h2 className="section-title">{categoryData.title}</h2>
         <div className="category-image-container">
           {categoryData &&
             categoryData.products.map((product) => (
