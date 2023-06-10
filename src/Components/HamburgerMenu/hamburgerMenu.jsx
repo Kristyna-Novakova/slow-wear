@@ -21,7 +21,9 @@ export const HamburgerMenu = () => {
             { openCategories } ? 'categories-menu' : 'categories-menu close'
           }
         >
-          Kategorie <SlArrowDown className="arrow-icon" />
+          <a>
+            Kategorie <SlArrowDown className="arrow-icon" />
+          </a>
         </li>
         {openCategories && catalogue && (
           <div className="categories-list">
@@ -36,11 +38,21 @@ export const HamburgerMenu = () => {
             </ul>
           </div>
         )}
-        <Link to="/jak-to-funguje" className="categories-menu">
-          Jak to funguje
-        </Link>
-        <li>Přihlášení</li>
-        <li>Moje objednávky</li>
+        <li>
+          <Link to="/jak-to-funguje" className="categories-menu">
+            Jak to funguje
+          </Link>
+        </li>
+        <li>
+          <Link to="/" className="categories-menu">
+            Přihlášení
+          </Link>
+        </li>
+        <li>
+          <Link to="/" className="categories-menu">
+            Moje objednávky
+          </Link>
+        </li>
       </ul>
     </div>
   );

@@ -23,18 +23,23 @@ export const CategoryPage = () => {
         <h2 className="section-title">{categoryData.title}</h2>
         <div className="category-image-container">
           {categoryData &&
-            categoryData.products.map((product) => (
-              <div className="category-image-detail" key={product.id}>
-                <Link to={`/category/${category}/${product.id}`}>
-                  <img src={`../../${product.url}`} alt={product.name} />
-                </Link>
+            Object.entries(categoryData.products).map(
+              ([productId, product]) => (
+                <div className="category-image-detail" key={productId}>
+                  <Link to={`/category/${categoryId}/${productId}`}>
+                    <img
+                      src={`/img/products/${product.url}`}
+                      alt={product.name}
+                    />
+                  </Link>
 
-                <h3>{product.name}</h3>
-                <p className="image-caption">
-                  {product.price} {product.currency}
-                </p>
-              </div>
-            ))}
+                  <h3>{product.name}</h3>
+                  <p className="image-caption">
+                    {product.price} {product.currency}
+                  </p>
+                </div>
+              ),
+            )}
         </div>
       </div>
     </section>

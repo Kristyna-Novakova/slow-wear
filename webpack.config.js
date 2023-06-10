@@ -13,7 +13,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     liveReload: true,
-    hot: 'only',
+    hot: true,
   },
   resolve: {
     extensions: ['.js', '.jsx'],

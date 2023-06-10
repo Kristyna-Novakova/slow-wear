@@ -15,7 +15,7 @@ export const ProductDetail = () => {
     return <p>Data se načítají.</p>;
   }
 
-  const product = catalogue[categoryId][productId];
+  const product = catalogue[categoryId].products[productId];
 
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState('');
@@ -50,7 +50,7 @@ export const ProductDetail = () => {
     <section className="section">
       <div className="product-page">
         <div className="product-image">
-          <img src={`../../${product.url}`} alt="Fotografie tička s popisem" />
+          <img src={`/img/products/${product.url}`} alt={product.name} />
         </div>
         <div className="product-content">
           <h2 className="product-title">{product.name}</h2>

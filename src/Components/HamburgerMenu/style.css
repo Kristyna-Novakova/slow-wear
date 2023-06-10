@@ -3,8 +3,6 @@
   top: 101%;
   right: 0;
   background-color: #F1F0EF;
-  padding: 1rem;
-  padding-bottom: 1.5rem;
   display: none;
   width: 25vw;
   display: block;
@@ -18,17 +16,17 @@
   margin: 0;
 }
 
-.menu-items>ul>li,
-.menu-items a {
+.menu-items ul li {
   list-style: none;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 20px 0;
-  margin: 10px 15px;
   border-bottom: 1px solid #cfc4c4;
-  text-decoration: none;
-  color: #555;
+  font-weight: bold;
+}
+
+.menu-items>ul>li:last-child {
+  border-bottom: none;
 }
 
 .arrow-icon {
@@ -37,7 +35,20 @@
 
 .menu-items a {
   display: block;
+  text-align: center;
+  padding: 30px 15px;
+  text-decoration: none;
+  color: #555;
 }
+
+.menu-items>ul>li:first-child a {
+  padding-top: 40px;
+}
+
+.menu-items>ul>li:last-child a {
+  padding-bottom: 40px;
+}
+
 
 .close {
   display: none;
@@ -51,7 +62,7 @@
 .categories-list li {
   font-size: 13px;
   list-style: none;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 
