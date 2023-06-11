@@ -27,14 +27,18 @@ export const ShoppingCart = () => {
 
             return (
               <li className="cart-item" key={item.productId + item.size}>
-                <div className="item-image">
-                  <img
-                    src={`/img/products/${product.url}`}
-                    alt={product.name}
-                  />
-                </div>
+                <Link to={`/kategorie/${item.categoryId}/${item.productId}`}>
+                  <div className="item-image">
+                    <img
+                      src={`/img/products/${product.url}`}
+                      alt={product.name}
+                    />
+                  </div>
+                </Link>
                 <div className="item-details">
-                  <h3 className="item-name">{product.name}</h3>
+                  <Link to={`/kategorie/${item.categoryId}/${item.productId}`}>
+                    <h3 className="item-name">{product.name}</h3>
+                  </Link>
                   <p className="item-size">Velikost: {item.size}</p>
                   <p className="item-quantity">Množství: {item.quantity}</p>
                   <p className="item-price">

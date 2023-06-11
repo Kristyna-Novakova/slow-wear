@@ -6,7 +6,7 @@
 .cart-title {
   text-align: center;
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   text-transform: uppercase;
 }
 
@@ -30,8 +30,15 @@
   flex: 1;
 }
 
+.item-details a {
+  text-decoration: none;
+  color: #555;
+}
+
 .item-name {
   font-size: 18px;
+  text-transform: uppercase;
+
 }
 
 .item-name,
