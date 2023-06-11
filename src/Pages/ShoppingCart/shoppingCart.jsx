@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/Button/Button';
 import {
   useShoppingCart,
@@ -8,12 +8,26 @@ import {
   findProduct,
   computeTotalPrice,
 } from '../../lib/store';
+import { insertOrders } from '../../lib/db';
 
 export const ShoppingCart = () => {
-  const { cartItems, removeFromCart } = useShoppingCart();
+  const { cartItems, removeFromCart, clearShoppingCart } = useShoppingCart();
   const catalogue = useCatalogue();
+  const navigate = useNavigate();
 
   const totalPrice = computeTotalPrice(cartItems, catalogue);
+
+  const handleSetOrder = async () => {
+    const { data, error } = await insertOrders(cartItems);
+
+    if (error) {
+      alert('Objednávku se nepodařilo uložit. Zkuste to později.');
+      return;
+    }
+
+    clearShoppingCart();
+    navigate(`/objednavka/${data[0].id}`);
+  };
 
   return (
     <section className="section">
@@ -65,9 +79,7 @@ export const ShoppingCart = () => {
         </div>
 
         <div className="cart-actions">
-          <Link to="/platba">
-            <Button text="Odeslat objednávku" />
-          </Link>
+          <Button text="Odeslat objednávku" onClick={handleSetOrder} />
         </div>
       </div>
     </section>

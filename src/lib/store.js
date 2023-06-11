@@ -84,6 +84,8 @@ export const useShoppingCart = create(
 
           return { ...prevState, cartItems: newCartItems };
         }),
+      clearShoppingCart: () =>
+        set((prevState) => ({ ...prevState, cartItems: [] })),
       getProduct: ({ categoryId, productId, size }) =>
         findCartItem(get().cartItems, categoryId, productId, size),
       getProductsAmount: () => get().cartItems.length,

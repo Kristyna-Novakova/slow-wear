@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { useEffect, useState } from 'react';
 
 // Create a single supabase client for interacting with your database
 const supabase = createClient(
@@ -23,4 +24,43 @@ export const login = async (provider) => {
 
 export const logout = async () => {
   return await supabase.auth.signOut();
+};
+
+export const insertOrders = async (items) => {
+  return await supabase.from('orders').insert({ items }).select();
+};
+
+export const getOrder = async (orderId) => {
+  return await supabase.from('orders').select().eq(id, orderId);
+};
+
+export const listOrders = async (items) => {
+  return await supabase
+    .from('orders')
+    .select()
+    .order('id', { ascending: false });
+};
+
+export const useQuery = (query) => {
+  const [loading, setLoading] = useState(true);
+  const [queryData, setQueryData] = useState(null);
+  const [queryError, setQueryError] = useState(null);
+
+  const load = async () => {
+    const { data, error } = await query();
+    setLoading(false);
+
+    if (error) {
+      setQueryError(error);
+    }
+
+    if (data) {
+      setQueryData(data);
+    }
+  };
+
+  useEffect(() => {
+    load();
+  }, []);
+  return [loading, queryData, queryError];
 };

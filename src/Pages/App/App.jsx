@@ -8,8 +8,7 @@ import { ProductDetail } from '../ProductDetail/ProductDetail';
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
 import { Payment } from '../Payment/payment';
 import { UserLayout } from '../UserLayout/UserLayout';
-import { UserPage } from '../UserPage/UserPage';
-import { OrderDetail } from '../OrderDetail/OrderDetail';
+import { Orders } from '../Orders/Orders';
 import { UserDetail } from '../UserDetails/UserDetails';
 import { Footer } from '../../components/Footer/Footer';
 import {
@@ -36,7 +35,7 @@ export const App = () => {
         />
         <Route path="/kosik" element={<ShoppingCart />} />
         <Route
-          path="/platba"
+          path="/objednavka/:orderId"
           element={
             <Payment
               cisloUctu="2202326673/2010"
@@ -48,7 +47,7 @@ export const App = () => {
         />
         <Route path="/muj-ucet" element={<UserLayout />}>
           <Route path="" element={<UserDetail />} />
-          <Route path="objednavky" element={<OrderDetail />} />
+          <Route path="objednavky" element={<Orders />} />
         </Route>
       </Routes>
       <Footer />
