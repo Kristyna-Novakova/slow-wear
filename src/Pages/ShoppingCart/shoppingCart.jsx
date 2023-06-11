@@ -2,19 +2,18 @@ import React from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
 import { Button } from '../../components/Button/Button';
-import { useShoppingCart, useCatalogue } from '../../lib/store';
+import {
+  useShoppingCart,
+  useCatalogue,
+  findProduct,
+  computeTotalPrice,
+} from '../../lib/store';
 
 export const ShoppingCart = () => {
   const { cartItems, removeFromCart } = useShoppingCart();
   const catalogue = useCatalogue();
 
-  const findProduct = ({ categoryId, productId }) =>
-    catalogue[categoryId].products[productId];
-
-  const totalPrice = cartItems.reduce(
-    (totalPrice, item) => totalPrice + item.quantity * findProduct(item).price,
-    0,
-  );
+  const totalPrice = computeTotalPrice(cartItems, catalogue);
 
   return (
     <section className="section">
@@ -23,7 +22,7 @@ export const ShoppingCart = () => {
 
         <ul className="cart-items">
           {cartItems.map((item) => {
-            const product = findProduct(item);
+            const product = findProduct(item, catalogue);
 
             return (
               <li className="cart-item" key={item.productId + item.size}>

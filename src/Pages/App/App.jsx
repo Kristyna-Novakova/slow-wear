@@ -8,8 +8,17 @@ import { ProductDetail } from '../ProductDetail/ProductDetail';
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
 import { Payment } from '../Payment/payment';
 import { Footer } from '../../components/Footer/Footer';
+import {
+  computeTotalPrice,
+  useCatalogue,
+  useShoppingCart,
+} from '../../lib/store';
 
 export const App = () => {
+  const { cartItems } = useShoppingCart();
+  const catalogue = useCatalogue();
+  const totalPrice = computeTotalPrice(cartItems, catalogue);
+
   return (
     <div className="container">
       <Navbar />
@@ -28,7 +37,7 @@ export const App = () => {
             <Payment
               cisloUctu="2202326673/2010"
               variabilniSymbol={20232023}
-              castka={200}
+              castka={totalPrice}
               zprava="Ahoj"
             />
           }
