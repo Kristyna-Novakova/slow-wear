@@ -39,7 +39,7 @@ export const ShoppingCart = () => {
             const product = findProduct(item, catalogue);
 
             return (
-              <li className="cart-item" key={item.productId + item.size}>
+              <li className="cart-item" key={item.productId + '_' + item.size}>
                 <Link to={`/kategorie/${item.categoryId}/${item.productId}`}>
                   <div className="item-image">
                     <img

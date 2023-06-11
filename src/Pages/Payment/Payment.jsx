@@ -35,11 +35,16 @@ export const Payment = (props) => {
   return (
     <section className="payment-section">
       <h2 className="section-title">Platba</h2>
-      <QRCode value={generateQRplatbaText(props)} className="qr-code" />
       <p className="payment-text">
         Projekt Slow Wear je v procesu slow realizace, ale vy si mezitím můžete
         připsat body za dobrou karmu a podpořit Nadační fond Czechitas.
       </p>
+      <div className="payment-details">
+        <p>Číšlo účtu: {props.cisloUctu}</p>
+        <p>Variabilní symbol: {props.variabilniSymbol}</p>
+        <p>Částka: {props.castka} Kč</p>
+      </div>
+      <QRCode value={generateQRplatbaText(props)} className="qr-code" />
     </section>
   );
 };

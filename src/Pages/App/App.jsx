@@ -6,22 +6,13 @@ import { HowItWorks } from '../HowItWorks/HowItWorks';
 import { CategoryPage } from '../CategoryPage/CategoryPage';
 import { ProductDetail } from '../ProductDetail/ProductDetail';
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
-import { Payment } from '../Payment/payment';
 import { UserLayout } from '../UserLayout/UserLayout';
 import { Orders } from '../Orders/Orders';
 import { UserDetail } from '../UserDetails/UserDetails';
+import { OrderDetail } from '../OrderDetail/OrderDetail';
 import { Footer } from '../../components/Footer/Footer';
-import {
-  computeTotalPrice,
-  useCatalogue,
-  useShoppingCart,
-} from '../../lib/store';
 
 export const App = () => {
-  const { cartItems } = useShoppingCart();
-  const catalogue = useCatalogue();
-  const totalPrice = computeTotalPrice(cartItems, catalogue);
-
   return (
     <div className="container">
       <Navbar />
@@ -34,17 +25,7 @@ export const App = () => {
           element={<ProductDetail />}
         />
         <Route path="/kosik" element={<ShoppingCart />} />
-        <Route
-          path="/objednavka/:orderId"
-          element={
-            <Payment
-              cisloUctu="2202326673/2010"
-              variabilniSymbol={20232023}
-              castka={totalPrice}
-              zprava="Děkujeme"
-            />
-          }
-        />
+        <Route path="/objednavka/:orderId" element={<OrderDetail />} />
         <Route path="/muj-ucet" element={<UserLayout />}>
           <Route path="" element={<UserDetail />} />
           <Route path="objednavky" element={<Orders />} />

@@ -31,7 +31,7 @@ export const insertOrders = async (items) => {
 };
 
 export const getOrder = async (orderId) => {
-  return await supabase.from('orders').select().eq(id, orderId);
+  return await supabase.from('orders').select().eq('id', orderId);
 };
 
 export const listOrders = async (items) => {
