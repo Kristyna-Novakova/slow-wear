@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import jsonData from '../categories.json';
 import { persist, devtools } from 'zustand/middleware';
+import { getSession, login, logout } from './db';
 
 const findCartItem = (cartItems, categoryId, productId, size) =>
   cartItems.find(
@@ -90,3 +91,36 @@ export const useShoppingCart = create(
     { name: 'shopping-cart' },
   ),
 );
+
+export const useSession = create((set) => {
+  (async () => {
+    const { session, error } = await getSession();
+    if (error || !session) {
+      set((prevState) => ({
+        ...prevState,
+        sessionLoading: false,
+        session: null,
+      }));
+    } else {
+      set((prevState) => ({
+        ...prevState,
+        sessionLoading: false,
+        session: session,
+      }));
+    }
+  })();
+
+  return {
+    sessionLoading: true,
+    session: null,
+    login,
+    logout: () => {
+      logout();
+      set((prevState) => ({
+        ...prevState,
+        sessionLoading: false,
+        session: null,
+      }));
+    },
+  };
+});

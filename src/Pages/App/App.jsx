@@ -47,9 +47,8 @@ export const App = () => {
           }
         />
         <Route path="/muj-ucet" element={<UserLayout />}>
-          <Route path="" element={<UserPage />} />
+          <Route path="" element={<UserDetail />} />
           <Route path="objednavky" element={<OrderDetail />} />
-          <Route path="osobni-udaje" element={<UserDetail />} />
         </Route>
       </Routes>
       <Footer />

@@ -1,7 +1,11 @@
 import React from 'react';
 import './style.css';
+import { useSession } from '../../lib/store';
 
 export const UserDetail = () => {
+  const { session } = useSession();
+
+  console.log(session);
   return (
     <div className="user-details">
       <div className="user-title">
@@ -10,15 +14,19 @@ export const UserDetail = () => {
       <div className="user-detail">
         <div className="user-name">
           <h3>Jméno</h3>
-          <p>Nelča Letochová</p>
+          <p>{session.user.user_metadata.full_name}</p>
+        </div>
+        <div className="user-email">
+          <h3>E-mail</h3>
+          <p>{session.user.email}</p>
         </div>
         <div className="user-phone-number">
           <h3>Telefonní číslo</h3>
-          <p>+420 789 245 324</p>
-        </div>
-        <div className="user-address">
-          <h3>Adresa</h3>
-          <p>Koníkova 58 Praha 11</p>
+          {session.user.phone === '' ? (
+            <p className="italic">Neuvedeno</p>
+          ) : (
+            session.user.phone
+          )}
         </div>
       </div>
     </div>
