@@ -1,5 +1,5 @@
 import React from 'react';
-import { Payment } from '../Payment/payment';
+import { Payment } from '../../components/Payment/Payment';
 import { useCatalogue, findProduct, computeTotalPrice } from '../../lib/store';
 import { useQuery, getOrder } from '../../lib/db';
 import { useParams } from 'react-router-dom';
