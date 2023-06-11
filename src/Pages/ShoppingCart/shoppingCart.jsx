@@ -66,7 +66,7 @@ export const ShoppingCart = () => {
 
         <div className="cart-actions">
           <Link to="/platba">
-            <Button text="Pokračovat k platbě" />
+            <Button text="Odeslat objednávku" />
           </Link>
         </div>
       </div>

@@ -39,7 +39,9 @@ export const Navbar = () => {
           </div>
           <ul className="menu">
             <li>
-              <BsPerson />
+              <Link to="/muj-ucet" className="registration-container">
+                <BsPerson />
+              </Link>
             </li>
             <li>
               <Link to="/kosik" className="cart-container">

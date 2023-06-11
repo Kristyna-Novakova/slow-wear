@@ -7,6 +7,9 @@ import { CategoryPage } from '../CategoryPage/CategoryPage';
 import { ProductDetail } from '../ProductDetail/ProductDetail';
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
 import { Payment } from '../Payment/payment';
+import { UserPage } from '../UserPage/UserPage';
+import { OrderDetail } from '../OrderDetail/OrderDetail';
+import { UserDetail } from '../UserDetails/UserDetails';
 import { Footer } from '../../components/Footer/Footer';
 import {
   computeTotalPrice,
@@ -38,10 +41,13 @@ export const App = () => {
               cisloUctu="2202326673/2010"
               variabilniSymbol={20232023}
               castka={totalPrice}
-              zprava="Ahoj"
+              zprava="Děkujeme"
             />
           }
         />
+        <Route path="/muj-ucet" element={<UserPage />} />
+        <Route path="/muj-ucet/objednavky" element={<OrderDetail />} />
+        <Route path="/muj-ucet/osobni-udaje" element={<UserDetail />} />
       </Routes>
       <Footer />
     </div>
