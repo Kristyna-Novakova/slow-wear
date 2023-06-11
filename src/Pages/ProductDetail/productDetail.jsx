@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import './style.css';
 import { Button } from '../../components/Button/Button';
 import { useCatalogue, useShoppingCart } from '../../lib/store';
+import { Loading } from '../Loading/Loading';
 
 const minQuantity = 1;
 const maxQuantity = 10;
@@ -13,7 +14,13 @@ export const ProductDetail = () => {
   const { addToCart, getProduct } = useShoppingCart();
 
   if (!catalogue) {
-    return <p>Data se načítají.</p>;
+    return (
+      <section className="product-section">
+        <div className="product-page">
+          <Loading />
+        </div>
+      </section>
+    );
   }
 
   const product = catalogue[categoryId].products[productId];

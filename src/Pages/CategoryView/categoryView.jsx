@@ -21,20 +21,20 @@ export const CategoryView = () => {
         </div>
 
         {catalogue && (
-          <div className="category-view-photos">
+          <ul className="category-view-photos">
             {Object.keys(catalogue).map((categoryId) => (
-              <Link
-                key={categoryId}
-                to={`/kategorie/${categoryId}`}
+              <li
                 className="category-image"
                 style={{
                   backgroundImage: `url(/img/categories/${categoryId}.jpg)`,
                 }}
               >
-                <h3>{catalogue[categoryId].title}</h3>
-              </Link>
+                <Link key={categoryId} to={`/kategorie/${categoryId}`}>
+                  <h3>{catalogue[categoryId].title}</h3>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
       </div>
     </section>

@@ -5,8 +5,13 @@
   margin: 0;
 }
 
+body {
+  min-height: 100vh;
+}
+
 html {
   font-family: 'Montserrat', sans-serif;
+
 }
 
 /* .container {

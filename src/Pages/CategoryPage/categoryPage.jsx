@@ -2,13 +2,20 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './style.css';
 import { useCatalogue } from '../../lib/store';
+import { Loading } from '../Loading/Loading';
 
 export const CategoryPage = () => {
   const catalogue = useCatalogue();
   const { categoryId } = useParams();
 
   if (!catalogue) {
-    return <p>Data se načítají.</p>;
+    return (
+      <section className="category-section align-center-content">
+        <div>
+          <Loading />
+        </div>
+      </section>
+    );
   }
 
   const categoryData = catalogue[categoryId];
