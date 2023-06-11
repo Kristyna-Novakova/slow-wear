@@ -24,6 +24,7 @@ export const CategoryView = () => {
           <ul className="category-view-photos">
             {Object.keys(catalogue).map((categoryId) => (
               <li
+                key={categoryId}
                 className="category-image"
                 style={{
                   backgroundImage: `url(/img/categories/${categoryId}.jpg)`,

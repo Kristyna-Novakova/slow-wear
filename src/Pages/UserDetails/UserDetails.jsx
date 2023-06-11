@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 export const UserDetail = () => {
   return (
@@ -7,8 +8,18 @@ export const UserDetail = () => {
         <h2>Profil</h2>
       </div>
       <div className="user-detail">
-        <h3 className="order-number">Jméno</h3>
-        <p className="shipped-order">Odesláno 11.06.2023</p>
+        <div className="user-name">
+          <h3>Jméno</h3>
+          <p>Nelča Letochová</p>
+        </div>
+        <div className="user-phone-number">
+          <h3>Telefonní číslo</h3>
+          <p>+420 789 245 324</p>
+        </div>
+        <div className="user-address">
+          <h3>Adresa</h3>
+          <p>Koníkova 58 Praha 11</p>
+        </div>
       </div>
     </>
   );

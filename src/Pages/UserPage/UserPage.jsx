@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
 import { Link, Outlet } from 'react-router-dom';
+import { UserDetail } from '../UserDetails/UserDetails';
+import { OrderDetail } from '../OrderDetail/OrderDetail';
 
 export const UserPage = () => {
   return (
@@ -23,7 +25,7 @@ export const UserPage = () => {
         </div>
         <Outlet />
         <div className="detail-information-container">
-          <h2 className="name"></h2>
+          <OrderDetail />
         </div>
       </div>
     </section>

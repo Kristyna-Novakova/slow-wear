@@ -12,6 +12,7 @@
   justify-content: flex-start;
   align-items: end;
   border-bottom: 0.5px solid #d0d0d0;
+  padding-left: 100px;
 }
 
 .name {
@@ -27,8 +28,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 25vw;
+  width: 100vw;
   margin-top: 40px;
+  margin-left: 100px;
 }
 
 .section-list {
@@ -61,4 +63,13 @@
 
 .section-list>ul>li:last-child {
   border-bottom: none;
+}
+
+.detail-information-container {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70vw;
 }
