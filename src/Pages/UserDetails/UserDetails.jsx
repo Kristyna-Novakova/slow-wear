@@ -3,7 +3,7 @@ import './style.css';
 
 export const UserDetail = () => {
   return (
-    <>
+    <div className="user-details">
       <div className="user-title">
         <h2>Profil</h2>
       </div>
@@ -21,6 +21,6 @@ export const UserDetail = () => {
           <p>Koníkova 58 Praha 11</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };

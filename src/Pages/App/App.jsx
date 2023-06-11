@@ -7,6 +7,7 @@ import { CategoryPage } from '../CategoryPage/CategoryPage';
 import { ProductDetail } from '../ProductDetail/ProductDetail';
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
 import { Payment } from '../Payment/payment';
+import { UserLayout } from '../UserLayout/UserLayout';
 import { UserPage } from '../UserPage/UserPage';
 import { OrderDetail } from '../OrderDetail/OrderDetail';
 import { UserDetail } from '../UserDetails/UserDetails';
@@ -45,9 +46,11 @@ export const App = () => {
             />
           }
         />
-        <Route path="/muj-ucet" element={<UserPage />} />
-        <Route path="/muj-ucet/objednavky" element={<OrderDetail />} />
-        <Route path="/muj-ucet/osobni-udaje" element={<UserDetail />} />
+        <Route path="/muj-ucet" element={<UserLayout />}>
+          <Route path="" element={<UserPage />} />
+          <Route path="objednavky" element={<OrderDetail />} />
+          <Route path="osobni-udaje" element={<UserDetail />} />
+        </Route>
       </Routes>
       <Footer />
     </div>
