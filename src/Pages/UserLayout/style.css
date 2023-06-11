@@ -65,6 +65,10 @@
   border-bottom: none;
 }
 
+.section-list a {
+  text-decoration: none;
+}
+
 .detail-information-container {
   margin-left: 50px;
   display: flex;
