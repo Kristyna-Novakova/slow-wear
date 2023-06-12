@@ -33,7 +33,7 @@ const generateQRplatbaText = ({
 
 export const Payment = (props) => {
   return (
-    <section className="payment-section">
+    <div className="payment-section">
       <h2 className="section-title">Platba</h2>
       <p className="payment-text">
         Projekt Slow Wear je v procesu slow realizace, ale vy si mezitím můžete
@@ -45,6 +45,6 @@ export const Payment = (props) => {
         <p>Částka: {props.castka} Kč</p>
       </div>
       <QRCode value={generateQRplatbaText(props)} className="qr-code" />
-    </section>
+    </div>
   );
 };

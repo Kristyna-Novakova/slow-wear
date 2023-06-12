@@ -7,6 +7,7 @@
   background-color: #F1F0EF;
   padding: 60px;
   color: #524F4A;
+  border-radius: 10px;
 }
 
 .section-title {
@@ -16,13 +17,18 @@
   text-transform: uppercase;
 }
 
-
-.qr-code {
-  margin-bottom: 60px;
+.payment-text,
+.payment-details {
+  padding-bottom: 40px;
 }
+
 
 .payment-text {
   font-size: 18px;
   color: #555;
   max-width: 45vw;
+}
+
+.qr-code {
+  margin-bottom: 60px;
 }
