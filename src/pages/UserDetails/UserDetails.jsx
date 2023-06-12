@@ -1,6 +1,9 @@
 import React from 'react';
 import './style.css';
 import { useSession } from '../../lib/store';
+import { BsPerson } from 'react-icons/bs';
+import { MdOutlineEmail } from 'react-icons/md';
+import { BsTelephone } from 'react-icons/bs';
 
 export const UserDetail = () => {
   const { session } = useSession();
@@ -13,15 +16,21 @@ export const UserDetail = () => {
       </div>
       <div className="user-detail">
         <div className="user-name">
-          <h3>Jméno</h3>
+          <h3>
+            <BsPerson /> Jméno
+          </h3>
           <p>{session.user.user_metadata.full_name}</p>
         </div>
         <div className="user-email">
-          <h3>E-mail</h3>
+          <h3>
+            <MdOutlineEmail /> E-mail
+          </h3>
           <p>{session.user.email}</p>
         </div>
         <div className="user-phone-number">
-          <h3>Telefonní číslo</h3>
+          <h3>
+            <BsTelephone /> Telefonní číslo
+          </h3>
           {session.user.phone === '' ? (
             <p className="italic">Neuvedeno</p>
           ) : (

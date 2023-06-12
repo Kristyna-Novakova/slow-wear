@@ -4,6 +4,7 @@ import { listOrders, useQuery } from '../../lib/db';
 import { format } from 'date-fns';
 import { Loading } from '../Loading/Loading';
 import { Link } from 'react-router-dom';
+import { TiShoppingBag } from 'react-icons/ti';
 
 export const Orders = () => {
   const [loading, data, error] = useQuery(listOrders);
@@ -23,7 +24,9 @@ export const Orders = () => {
             {data.map((order) => (
               <li key={order.id}>
                 <Link to={`/objednavka/${order.id}`}>
-                  <h3 className="order-number">Objednávka číslo {order.id}</h3>
+                  <h3 className="order-number">
+                    <TiShoppingBag /> Objednávka číslo {order.id}
+                  </h3>
                 </Link>
                 <p className="shipped-order">
                   Odesláno {format(new Date(order.created_at), 'd. M. yyyy')}
