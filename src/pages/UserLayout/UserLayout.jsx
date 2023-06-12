@@ -25,28 +25,30 @@ export const UserLayout = () => {
   if (session === null) {
     return (
       <div className="login-container">
-        <h2>Přihlášení</h2>
-        <motion.button
-          className="google"
-          onClick={handleGmailLogin}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <AiFillGoogleCircle />
-          Přihlásit se přes Google
-        </motion.button>
-        <motion.button
-          className="github"
-          onClick={handleGitHubLogin}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <AiFillGithub />
-          Přihlásit se přes GitHub
-        </motion.button>
-        {/* <button className="github" onClick={handleFacebookLogin}>
+        <div className="login-section">
+          <h2>Přihlášení</h2>
+          <motion.button
+            className="google"
+            onClick={handleGmailLogin}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <AiFillGoogleCircle />
+            Přihlásit se přes Google
+          </motion.button>
+          <motion.button
+            className="github"
+            onClick={handleGitHubLogin}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <AiFillGithub />
+            Přihlásit se přes GitHub
+          </motion.button>
+          {/* <button className="github" onClick={handleFacebookLogin}>
           Přihlásit se před Facebook
         </button> */}
+        </div>
       </div>
     );
   }

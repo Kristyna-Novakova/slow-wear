@@ -98,7 +98,13 @@
   background-color: #F1F0EF;
 }
 
-.login-container h2 {
+.login-section {
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  padding: 60px 45px;
+}
+
+.login-section h2 {
   font-size: 30px;
   color: #555;
   text-transform: uppercase;
@@ -106,7 +112,7 @@
   margin-bottom: 40px;
 }
 
-.login-container button {
+.login-section button {
   margin-bottom: 20px;
   padding: 17px 30px;
   font-size: 20px;
@@ -122,26 +128,26 @@
   transition: background-color 0.3s ease;
 }
 
-.login-container button:hover {
+.login-section button:hover {
   background-color: #999;
 }
 
-.login-container .google {
+.login-section .google {
   background-color: #bcbcbc;
   color: #fff;
 }
 
-.login-container .github {
+.login-section .github {
   background-color: #bcbcbc;
   color: #fff;
 }
 
-/* .login-container .facebook {
+/* .login-section .facebook {
   background-color: #3b5998;
   color: #fff;
 } */
 
-.login-container button svg {
+.login-section button svg {
   margin-right: 10px;
 }
 
@@ -171,7 +177,7 @@
     font-size: 16px;
   }
 
-  .login-container button {
+  .login-section button {
     font-size: 14px;
   }
 }
