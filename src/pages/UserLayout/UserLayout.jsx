@@ -3,10 +3,13 @@ import './style.css';
 import { Link, Outlet } from 'react-router-dom';
 import { getSession, login } from '../../lib/db';
 import { Loading } from '../Loading/Loading';
+import { motion } from 'framer-motion';
 import { useSession } from '../../lib/store';
 import { BsPerson } from 'react-icons/bs';
 import { TiShoppingBag } from 'react-icons/ti';
 import { FiLogOut } from 'react-icons/fi';
+import { AiFillGithub } from 'react-icons/ai';
+import { AiFillGoogleCircle } from 'react-icons/ai';
 
 export const UserLayout = () => {
   const { session, sessionLoading, login, logout } = useSession();
@@ -22,12 +25,25 @@ export const UserLayout = () => {
   if (session === null) {
     return (
       <div className="login-container">
-        <button className="github" onClick={handleGitHubLogin}>
-          Přihlásit se před GitHub
-        </button>
-        <button className="google" onClick={handleGmailLogin}>
-          Přihlásit se před Google
-        </button>
+        <h2>Přihlášení</h2>
+        <motion.button
+          className="google"
+          onClick={handleGmailLogin}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <AiFillGoogleCircle />
+          Přihlásit se přes Google
+        </motion.button>
+        <motion.button
+          className="github"
+          onClick={handleGitHubLogin}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <AiFillGithub />
+          Přihlásit se přes GitHub
+        </motion.button>
         {/* <button className="github" onClick={handleFacebookLogin}>
           Přihlásit se před Facebook
         </button> */}
