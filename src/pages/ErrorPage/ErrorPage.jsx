@@ -16,9 +16,9 @@ export const ErrorPage = () => {
         color="#fff"
         backgroundColor="#868686"
       />
-      <h2 className="error-title">Stránka nenalezena</h2>
+      <h2 className="error-title">Oops! Něco se pokazilo.</h2>
       <p className="error-description">
-        Bohužel se nám nepodařilo načíst požadovanou stránku. Prosím, vraťte se
+        Bohužel se nám nepodařilo nalézt požadovanou stránku. Prosím, vraťte se
         na <Link to="/">domovskou stránku</Link> a zkuste to znovu.
       </p>
     </div>

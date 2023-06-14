@@ -42,7 +42,7 @@ export const CategoryPage = () => {
 
                   <h3>{product.name}</h3>
                   <p className="image-caption">
-                    {product.price} {product.currency}
+                    {product.price} {product.currency}/měsíc
                   </p>
                 </div>
               ),

@@ -88,7 +88,7 @@ export const ProductDetail = () => {
         <div className="product-content">
           <h2 className="product-title">{product.name}</h2>
           <p className="product-price">
-            {product.price} {product.currency}
+            {product.price} {product.currency}/měsíc
           </p>
           <p className="product-description">{product.description}</p>
           <div className="product-sizes">

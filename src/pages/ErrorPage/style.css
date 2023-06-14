@@ -35,3 +35,13 @@
 .error-description a:hover {
   color: #8b8b8b;
 }
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .error-title {
+    font-size: 26px;
+  }
+}

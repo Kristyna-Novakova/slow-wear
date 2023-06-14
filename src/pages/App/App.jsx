@@ -12,6 +12,7 @@ import { UserDetail } from '../UserDetails/UserDetails';
 import { OrderDetail } from '../OrderDetail/OrderDetail';
 import { ErrorPage } from '../ErrorPage/ErrorPage';
 import { Footer } from '../../components/Footer/Footer';
+import { AboutUs } from '../AboutUs/AboutUs';
 
 export const App = () => {
   return (
@@ -32,6 +33,7 @@ export const App = () => {
           <Route path="objednavky" element={<Orders />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
+        <Route path="/o-nas" element={<AboutUs />} />
       </Routes>
       <Footer />
     </div>

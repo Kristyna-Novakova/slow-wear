@@ -48,6 +48,11 @@
   margin-bottom: 10px;
 }
 
+.item-details .item-size,
+.item-details .item-quantity {
+  padding: 0;
+}
+
 .remove-button {
   background-color: #CBC2B9;
   color: #fff;

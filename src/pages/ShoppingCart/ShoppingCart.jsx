@@ -55,11 +55,11 @@ export const ShoppingCart = () => {
                   <p className="item-size">Velikost: {item.size}</p>
                   <p className="item-quantity">Množství: {item.quantity}</p>
                   <p className="item-price">
-                    Cena za kus: {product.price} {product.currency}
+                    Cena za kus: {product.price} {product.currency}/měsíc
                   </p>
                   <p className="item-price">
                     Cena celkem: {product.price * item.quantity}{' '}
-                    {product.currency}
+                    {product.currency}/měsíc
                   </p>
                   <button
                     className="remove-button"
@@ -75,7 +75,9 @@ export const ShoppingCart = () => {
 
         <div className="cart-summary">
           <h3 className="summary-title">Souhrn objednávky</h3>
-          <p className="summary-total">Celková cena: {totalPrice} Kč</p>
+          <p className="summary-total">
+            Celková cena za měsíc: {totalPrice} Kč
+          </p>
         </div>
 
         <div className="cart-actions">

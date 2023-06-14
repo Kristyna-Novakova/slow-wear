@@ -88,7 +88,6 @@
 
 
 /* Login Page */
-/* Login Page */
 .login-container {
   display: flex;
   flex-direction: column;
@@ -135,11 +134,13 @@
 .login-section .google {
   background-color: #bcbcbc;
   color: #fff;
+  width: 320px;
 }
 
 .login-section .github {
   background-color: #bcbcbc;
   color: #fff;
+  width: 320px;
 }
 
 /* .login-section .facebook {

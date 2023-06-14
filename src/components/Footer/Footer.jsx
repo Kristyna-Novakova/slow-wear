@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 import logoSW from '../../img/logoSW.png';
 import { BsInstagram } from 'react-icons/bs';
@@ -12,12 +13,23 @@ export const Footer = () => {
           <img src={logoSW} alt="logo" />
         </div>
         <ul className="footer-text">
-          <li>O nás</li>
-          <li>Registrace</li>
-          <li>Help Desk</li>
+          <li>
+            {' '}
+            <Link to="/o-nas">O nás</Link>
+          </li>
+          <li>
+            <Link to="/muj-ucet">Registrace</Link>
+          </li>
           <div className="social-media">
-            <BsInstagram />
-            <BsFacebook />
+            <a href="https://www.instagram.com/kristynan/" target="_blank">
+              <BsInstagram />
+            </a>
+            <a
+              href="https://www.facebook.com/kristyna.novakova.754/"
+              target="_blank"
+            >
+              <BsFacebook />
+            </a>
           </div>
         </ul>
       </div>

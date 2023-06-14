@@ -36,10 +36,12 @@ export const Payment = (props) => {
     <div className="payment-section">
       <h2 className="section-title">Platba</h2>
       <p className="payment-text">
-        Projekt Slow Wear je v procesu slow realizace, ale vy si mezitím můžete
-        připsat body za dobrou karmu a podpořit Nadační fond Czechitas.
+        Projekt Slow Wear zatím nemá reálné zboží a nemůže přijímat objednávky.
+        Pokud si ale chcete připsat body za dobrou karmu a podpořit Nadační fond
+        Czechitas.
       </p>
       <div className="payment-details">
+        <p>Adresát platby: Nadační fond Czechitas</p>
         <p>Číšlo účtu: {props.cisloUctu}</p>
         <p>Variabilní symbol: {props.variabilniSymbol}</p>
         <p>Částka: {props.castka} Kč</p>
