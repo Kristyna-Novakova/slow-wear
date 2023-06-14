@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './style.css';
 import { Link, Outlet } from 'react-router-dom';
-import { getSession, login } from '../../lib/db';
 import { Loading } from '../Loading/Loading';
 import { motion } from 'framer-motion';
 import { useSession } from '../../lib/store';

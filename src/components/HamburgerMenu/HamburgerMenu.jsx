@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
 import { SlArrowDown } from 'react-icons/sl';
-import { useCatalogue } from '../../lib/store';
+import { useCatalogue, useSession } from '../../lib/store';
 
 export const HamburgerMenu = () => {
   const [openCategories, setOpenCategories] = useState(false);
   const catalogue = useCatalogue();
+  const { session } = useSession();
 
   const handleCategoriesList = (event) => {
     event.stopPropagation();
@@ -45,15 +46,17 @@ export const HamburgerMenu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/" className="categories-menu">
-            Přihlášení
+          <Link to="/muj-ucet" className="categories-menu">
+            {!session ? 'Přihlásit se' : ' Můj účet'}
           </Link>
         </li>
-        <li>
-          <Link to="/" className="categories-menu">
-            Moje objednávky
-          </Link>
-        </li>
+        {session && (
+          <li>
+            <Link to="/muj-ucet/objednavky" className="categories-menu">
+              Moje objednávky
+            </Link>
+          </li>
+        )}
       </ul>
     </div>
   );
