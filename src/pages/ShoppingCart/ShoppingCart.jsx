@@ -7,11 +7,13 @@ import {
   useCatalogue,
   findProduct,
   computeTotalPrice,
+  useSession,
 } from '../../lib/store';
 import { insertOrders } from '../../lib/db';
 
 export const ShoppingCart = () => {
   const { cartItems, removeFromCart, clearShoppingCart } = useShoppingCart();
+  const { session } = useSession();
 
   const catalogue = useCatalogue();
   const navigate = useNavigate();
@@ -20,6 +22,11 @@ export const ShoppingCart = () => {
 
   const handleSetOrder = async () => {
     const { data, error } = await insertOrders(cartItems);
+
+    if (!session) {
+      navigate('/muj-ucet');
+      return;
+    }
 
     if (error) {
       alert('Objednávku se nepodařilo uložit. Zkuste to později.');
