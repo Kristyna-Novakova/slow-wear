@@ -18,7 +18,7 @@ export const Footer = () => {
             <Link to="/o-nas">O nás</Link>
           </li>
           <li>
-            <Link to="/muj-ucet">Registrace</Link>
+            <Link to="/muj-ucet">Přihlášení</Link>
           </li>
           <div className="social-media">
             <a href="https://www.instagram.com/kristynan/" target="_blank">

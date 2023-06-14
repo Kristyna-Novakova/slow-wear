@@ -12,6 +12,7 @@ import { insertOrders } from '../../lib/db';
 
 export const ShoppingCart = () => {
   const { cartItems, removeFromCart, clearShoppingCart } = useShoppingCart();
+
   const catalogue = useCatalogue();
   const navigate = useNavigate();
 
@@ -33,45 +34,56 @@ export const ShoppingCart = () => {
     <section className="section">
       <div className="cart-section">
         <h2 className="cart-title">Nákupní košík</h2>
+        <p className="empty-cart">
+          Nákupní košík zeje prázdnotou. Vyber si z naší široké nabídky oblečení
+          a naplň ho stylovými kousky.{' '}
+        </p>
 
-        <ul className="cart-items">
-          {cartItems.map((item) => {
-            const product = findProduct(item, catalogue);
+        {cartItems && (
+          <ul className="cart-items">
+            {cartItems.map((item) => {
+              const product = findProduct(item, catalogue);
 
-            return (
-              <li className="cart-item" key={item.productId + '_' + item.size}>
-                <Link to={`/kategorie/${item.categoryId}/${item.productId}`}>
-                  <div className="item-image">
-                    <img
-                      src={`/img/products/${product.url}`}
-                      alt={product.name}
-                    />
-                  </div>
-                </Link>
-                <div className="item-details">
+              return (
+                <li
+                  className="cart-item"
+                  key={item.productId + '_' + item.size}
+                >
                   <Link to={`/kategorie/${item.categoryId}/${item.productId}`}>
-                    <h3 className="item-name">{product.name}</h3>
+                    <div className="item-image">
+                      <img
+                        src={`/img/products/${product.url}`}
+                        alt={product.name}
+                      />
+                    </div>
                   </Link>
-                  <p className="item-size">Velikost: {item.size}</p>
-                  <p className="item-quantity">Množství: {item.quantity}</p>
-                  <p className="item-price">
-                    Cena za kus: {product.price} {product.currency}/měsíc
-                  </p>
-                  <p className="item-price">
-                    Cena celkem: {product.price * item.quantity}{' '}
-                    {product.currency}/měsíc
-                  </p>
-                  <button
-                    className="remove-button"
-                    onClick={() => removeFromCart(item)}
-                  >
-                    Odebrat
-                  </button>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+                  <div className="item-details">
+                    <Link
+                      to={`/kategorie/${item.categoryId}/${item.productId}`}
+                    >
+                      <h3 className="item-name">{product.name}</h3>
+                    </Link>
+                    <p className="item-size">Velikost: {item.size}</p>
+                    <p className="item-quantity">Množství: {item.quantity}</p>
+                    <p className="item-price">
+                      Cena za kus: {product.price} {product.currency}/měsíc
+                    </p>
+                    <p className="item-price">
+                      Cena celkem: {product.price * item.quantity}{' '}
+                      {product.currency}/měsíc
+                    </p>
+                    <button
+                      className="remove-button"
+                      onClick={() => removeFromCart(item)}
+                    >
+                      Odebrat
+                    </button>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        )}
 
         <div className="cart-summary">
           <h3 className="summary-title">Souhrn objednávky</h3>
@@ -81,7 +93,11 @@ export const ShoppingCart = () => {
         </div>
 
         <div className="cart-actions">
-          <Button text="Odeslat objednávku" onClick={handleSetOrder} />
+          <Button
+            text="Odeslat objednávku"
+            onClick={handleSetOrder}
+            disabled={cartItems.length === 0}
+          />
         </div>
       </div>
     </section>

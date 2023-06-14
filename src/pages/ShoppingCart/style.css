@@ -3,6 +3,11 @@
   max-width: 140vh;
 }
 
+.empty-cart {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .cart-title {
   text-align: center;
   font-size: 24px;
