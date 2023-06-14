@@ -4,8 +4,11 @@ import './style.css';
 import logoSW from '../../img/logoSW.png';
 import { BsInstagram } from 'react-icons/bs';
 import { BsFacebook } from 'react-icons/bs';
+import { useSession } from '../../lib/store';
 
 export const Footer = () => {
+  const { session } = useSession();
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -18,7 +21,9 @@ export const Footer = () => {
             <Link to="/o-nas">O nás</Link>
           </li>
           <li>
-            <Link to="/muj-ucet">Přihlášení</Link>
+            <Link to="/muj-ucet" className="categories-menu">
+              {!session ? 'Přihlášení' : ' Můj účet'}
+            </Link>
           </li>
           <div className="social-media">
             <a href="https://www.instagram.com/kristynan/" target="_blank">

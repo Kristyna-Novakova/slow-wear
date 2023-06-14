@@ -17,7 +17,7 @@ export const CategoryView = () => {
             nejenom vypadá dobře, ale také pomáhá naší planetě. Děkujeme, že jsi
             součástí, a doufáme, že ti nabídka přinese radost.
           </p>
-          <Button text="Objev více" />
+          {/* <Button text="Objev více" /> */}
         </div>
 
         {catalogue && (

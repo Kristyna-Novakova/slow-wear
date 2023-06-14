@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Navbar } from '../../components/Navbar/Navbar';
 import { MainPage } from '../MainPage/MainPage';
 import { HowItWorks } from '../HowItWorks/HowItWorks';
+import { CategoryView } from '../CategoryView/CategoryView';
 import { CategoryPage } from '../CategoryPage/CategoryPage';
 import { ProductDetail } from '../ProductDetail/ProductDetail';
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
@@ -21,6 +22,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/jak-to-funguje" element={<HowItWorks />} />
+        <Route path="/kategorie" element={<CategoryView />} />
         <Route path="/kategorie/:categoryId" element={<CategoryPage />} />
         <Route
           path="/kategorie/:categoryId/:productId"

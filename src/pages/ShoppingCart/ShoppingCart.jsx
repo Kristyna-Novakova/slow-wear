@@ -41,10 +41,13 @@ export const ShoppingCart = () => {
     <section className="section">
       <div className="cart-section">
         <h2 className="cart-title">Nákupní košík</h2>
-        <p className="empty-cart">
-          Nákupní košík zeje prázdnotou. Vyber si z naší široké nabídky oblečení
-          a naplň ho stylovými kousky.{' '}
-        </p>
+
+        {cartItems.length === 0 && (
+          <p className="empty-cart">
+            Nákupní košík zeje prázdnotou. Vyber si z naší široké nabídky
+            oblečení a naplň ho stylovými kousky.{' '}
+          </p>
+        )}
 
         {cartItems && (
           <ul className="cart-items">
@@ -100,6 +103,9 @@ export const ShoppingCart = () => {
         </div>
 
         <div className="cart-actions">
+          <Link to="/kategorie">
+            <Button text="Pokračovat v nákupu" />
+          </Link>
           <Button
             text="Odeslat objednávku"
             onClick={handleSetOrder}

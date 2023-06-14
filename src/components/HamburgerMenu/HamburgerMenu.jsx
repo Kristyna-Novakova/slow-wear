@@ -47,7 +47,7 @@ export const HamburgerMenu = () => {
         </li>
         <li>
           <Link to="/muj-ucet" className="categories-menu">
-            {!session ? 'Přihlásit se' : ' Můj účet'}
+            {!session ? 'Přihlášení' : ' Můj účet'}
           </Link>
         </li>
         {session && (
