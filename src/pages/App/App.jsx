@@ -10,6 +10,7 @@ import { UserLayout } from '../UserLayout/UserLayout';
 import { Orders } from '../Orders/Orders';
 import { UserDetail } from '../UserDetails/UserDetails';
 import { OrderDetail } from '../OrderDetail/OrderDetail';
+import { ErrorPage } from '../ErrorPage/ErrorPage';
 import { Footer } from '../../components/Footer/Footer';
 
 export const App = () => {
@@ -30,6 +31,7 @@ export const App = () => {
           <Route path="" element={<UserDetail />} />
           <Route path="objednavky" element={<Orders />} />
         </Route>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </div>
