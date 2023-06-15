@@ -1,7 +1,7 @@
 .category-section {
-  background-color: #F1F0EF;
+  background-color: var(--background-color);
   padding: 60px;
-  color: #524F4A;
+  color: var(--text);
 }
 
 .category-image-container {

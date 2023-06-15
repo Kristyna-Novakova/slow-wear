@@ -1,7 +1,7 @@
 .product-section {
-  background-color: #F1F0EF;
+  background-color: var(--background-color);
   padding: 60px;
-  color: #524F4A;
+  color: var(--text);
 }
 
 .product-page {

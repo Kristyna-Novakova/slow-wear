@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+:root {
+  --background-color: #F1F0EF;
+  --text: #524F4a;
+  --title-size: 30px;
+}
+
+/* ZÁKLADNÍ STYLY */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,12 +22,6 @@ html {
 
 }
 
-/* .container {
-  max-width: 26rem;
-  margin-right: auto;
-  margin-left: auto;
-} */
-
 header {
   display: flex;
   flex-direction: column;
@@ -29,9 +31,9 @@ header {
 
 .section {
   min-height: 100vh;
-  background-color: #F1F0EF;
+  background-color: var(--background-color);
   padding: 60px;
-  color: #524F4A;
+  color: var(--text);
 }
 
 .align-center-content {

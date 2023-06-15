@@ -1,5 +1,5 @@
 .user-details {
-  color: #524F4A;
+  color: var(--text);
 }
 
 .user-title {

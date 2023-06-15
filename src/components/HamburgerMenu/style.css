@@ -2,7 +2,7 @@
   position: absolute;
   top: 101%;
   right: 0;
-  background-color: #F1F0EF;
+  background-color: var(--background-color);
   display: none;
   width: 25vw;
   display: block;

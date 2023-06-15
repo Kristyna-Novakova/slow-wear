@@ -5,8 +5,8 @@
   justify-content: center;
   height: 75vh;
   text-align: center;
-  background-color: #f1f0ef;
-  color: #524f4a;
+  background-color: var(--background-color);
+  color: var(--text);
 }
 
 .error-container svg {
@@ -14,7 +14,7 @@
 }
 
 .error-title {
-  font-size: 30px;
+  font-size: var(--title-size);
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -26,7 +26,7 @@
 }
 
 .error-description a {
-  color: #524f4a;
+  color: var(--text);
   text-decoration: none;
   transition: color 0.3s ease-in-out;
   font-weight: bold;

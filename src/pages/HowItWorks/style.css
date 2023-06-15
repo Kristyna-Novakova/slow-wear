@@ -1,6 +1,6 @@
 .section-title {
   text-align: center;
-  font-size: 30px;
+  font-size: var(--title-size);
   margin-bottom: 35px;
   text-transform: uppercase;
 }

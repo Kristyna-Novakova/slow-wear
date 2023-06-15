@@ -17,8 +17,8 @@
 }
 
 .category-view-text h2 {
-  color: #F1F0EF;
-  font-size: 30px;
+  color: var(--background-color);
+  font-size: var(--title-size);
   margin-bottom: 30px;
   text-transform: uppercase;
 }

@@ -1,7 +1,7 @@
 .user-page-section {
   min-height: 100vh;
-  background-color: #F1F0EF;
-  color: #524F4A;
+  background-color: var(--background-color);
+  color: var(--text);
 }
 
 .user-detail-container {
@@ -17,10 +17,10 @@
 
 .name {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: var(--title-size);
   margin-bottom: 35px;
   margin-left: 30px;
-  color: #F1F0EF;
+  color: var(--background-color);
 }
 
 .information-container {
@@ -94,7 +94,7 @@
   align-items: center;
   justify-content: center;
   height: 71vh;
-  background-color: #F1F0EF;
+  background-color: var(--background-color);
 }
 
 .login-section {
@@ -104,7 +104,7 @@
 }
 
 .login-section h2 {
-  font-size: 30px;
+  font-size: var(--title-size);
   color: #555;
   text-transform: uppercase;
   text-align: center;
