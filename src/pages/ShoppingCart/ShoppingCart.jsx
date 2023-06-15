@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './style.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/Button/Button';
@@ -36,6 +36,10 @@ export const ShoppingCart = () => {
     clearShoppingCart();
     navigate(`/objednavka/${data[0].id}`);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <section className="section">

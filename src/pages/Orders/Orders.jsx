@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './style.css';
 import { listOrders, useQuery } from '../../lib/db';
 import { format } from 'date-fns';
@@ -8,6 +8,10 @@ import { TiShoppingBag } from 'react-icons/ti';
 
 export const Orders = () => {
   const [loading, data, error] = useQuery(listOrders);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="orders">

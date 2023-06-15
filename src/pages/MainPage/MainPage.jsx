@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef, useEffect } from 'react';
 import './style.css';
 import webCover from './img/web-cover.png';
 import { SlArrowDown } from 'react-icons/sl';
@@ -14,6 +13,10 @@ export const MainPage = () => {
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <main>
