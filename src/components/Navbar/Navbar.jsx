@@ -68,7 +68,10 @@ export const Navbar = () => {
                       scale: 0,
                     }}
                     animate={{
-                      scale: [1, 1.5, 1.5, 1, 1],
+                      scale: [1, 1.3, 1.6, 1.4, 1.3, 1],
+                    }}
+                    transition={{
+                      duration: 1,
                     }}
                     className="badge"
                   >
