@@ -22,7 +22,7 @@
 }
 
 .product-image img {
-  max-width: 48%;
+  max-width: 50%;
 }
 
 .product-content {
@@ -124,7 +124,8 @@
 
 /* Responsive Design */
 
-@media (max-width: 768px) {
+
+@media (max-width: 950px) {
   .product-page {
     flex-direction: column;
     align-items: center;
@@ -166,5 +167,15 @@
 
   .quantity-input input {
     font-size: 14px;
+  }
+}
+
+
+/* Phone */
+
+@media (max-width: 460px) {
+  .product-section {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

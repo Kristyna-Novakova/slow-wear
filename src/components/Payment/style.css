@@ -32,3 +32,22 @@
 .qr-code {
   margin-bottom: 60px;
 }
+
+
+/* Responsive Design */
+/* Phone */
+
+@media (max-width: 460px) {
+  .payment-text {
+    font-size: 17px;
+    max-width: 60vw;
+  }
+
+  .payment-details {
+    font-size: 15px;
+  }
+
+  .qr-code {
+    width: 50vw;
+  }
+}
