@@ -123,3 +123,11 @@
     height: 250px;
   }
 }
+
+/* Phone */
+
+@media (max-width: 460px) {
+  .about {
+    width: 70%;
+  }
+}
