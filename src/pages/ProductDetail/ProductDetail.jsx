@@ -12,6 +12,7 @@ export const ProductDetail = () => {
   const { categoryId, productId } = useParams();
   const catalogue = useCatalogue();
   const { addToCart, getProduct } = useShoppingCart();
+  const [buttonText, setButtonText] = useState('Přidat do košíku');
 
   if (!catalogue) {
     return (
@@ -79,6 +80,11 @@ export const ProductDetail = () => {
     }
   };
 
+  const handleAddToCart = () => {
+    addToCart({ categoryId, productId, size, quantity });
+    setButtonText('Přidáno');
+  };
+
   return (
     <section className="product-section">
       <div className="product-page">
@@ -132,10 +138,7 @@ export const ProductDetail = () => {
               </button>
             </div>
           </div>
-          <Button
-            text="Přidat do košíku"
-            onClick={() => addToCart({ categoryId, productId, size, quantity })}
-          />
+          <Button text={buttonText} onClick={handleAddToCart} />
         </div>
       </div>
     </section>
