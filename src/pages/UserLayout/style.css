@@ -182,3 +182,17 @@
     font-size: 14px;
   }
 }
+
+
+/* Phone */
+
+@media (max-width: 460px) {
+  .login-section {
+    padding: 40px 20px;
+  }
+
+  .login-section h2 {
+    font-size: 25px;
+  }
+
+}

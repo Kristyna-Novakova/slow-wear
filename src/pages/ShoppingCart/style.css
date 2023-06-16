@@ -89,10 +89,19 @@
 .cart-actions {
   margin-top: 20px;
   text-align: center;
+
 }
 
-.cart-actions a button {
-  margin-right: 20px;
+.cart-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-actions button {
+  width: 230px;
 }
 
 
@@ -115,11 +124,7 @@
   }
 
   .cart-actions {
-    display: flex;
     flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
   }
 
   .cart-actions a button {
