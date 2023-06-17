@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './style.css';
 import { Link, Outlet } from 'react-router-dom';
 import { Loading } from '../Loading/Loading';
@@ -12,6 +12,10 @@ import { AiFillGoogleCircle } from 'react-icons/ai';
 
 export const UserLayout = () => {
   const { session, sessionLoading, login, logout } = useSession();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleGitHubLogin = () => login('github');
   const handleGmailLogin = () => login('google');
