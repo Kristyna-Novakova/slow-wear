@@ -16,7 +16,7 @@ export const HowItWorks = ({ sectionRef }) => {
         <p className="section-description">
           Představ si svůj šatník plný stylových a moderních kousků oblečení,
           které si můžeš každý měsíc obměňovat bez nutnosti kupovat nové. To je
-          přesně to, co nabízí půjčovna oblečení Slow-Wear!
+          přesně to, co nabízí půjčovna oblečení Slow Wear!
         </p>
         <div className="image-container">
           <div className="image">
