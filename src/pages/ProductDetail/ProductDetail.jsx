@@ -12,6 +12,7 @@ export const ProductDetail = () => {
   const { categoryId, productId } = useParams();
   const catalogue = useCatalogue();
   const { addToCart, getProduct } = useShoppingCart();
+  const [addedToCart, setAddedToCart] = useState(false);
   const [buttonText, setButtonText] = useState('Přidat do košíku');
 
   if (!catalogue) {
@@ -48,12 +49,18 @@ export const ProductDetail = () => {
     setQuantity((quantity) =>
       quantity > minQuantity ? quantity - 1 : quantity,
     );
+
+    setAddedToCart(false);
+    setButtonText('Přidat do košíku');
   };
 
   const handleIncrementQuantity = () => {
     setQuantity((quantity) =>
       quantity < maxQuantity ? quantity + 1 : quantity,
     );
+
+    setAddedToCart(false);
+    setButtonText('Přidat do košíku');
   };
 
   const handleQuantityChange = (e) => {
@@ -68,7 +75,12 @@ export const ProductDetail = () => {
     } else {
       setQuantity(valueData);
     }
+
+    setAddedToCart(false);
+    setButtonText('Přidat do košíku');
   };
+
+  console.log(addedToCart);
 
   const handleChangeSize = (e) => {
     const newSize = e.target.value;
@@ -78,10 +90,14 @@ export const ProductDetail = () => {
     if (product) {
       setQuantity(product.quantity);
     }
+
+    setAddedToCart(false);
+    setButtonText('Přidat do košíku');
   };
 
   const handleAddToCart = () => {
     addToCart({ categoryId, productId, size, quantity });
+    setAddedToCart(true);
     setButtonText('Přidáno');
   };
 
