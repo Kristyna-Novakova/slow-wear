@@ -69,7 +69,26 @@
   color: #6D574A;
 }
 
+
+
 /* Responsive Design */
+
+
+@media (min-width: 1800px) {
+  .header-container {
+    height: 90px;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+
+  .menu li {
+    font-size: 30px;
+  }
+}
+
+
 
 @media (max-width: 768px) {
   .menu li {

@@ -49,6 +49,17 @@
 
 /* Responsive Design */
 
+@media (min-width: 1800px) {
+  .image-container {
+    gap: 4.9rem;
+  }
+
+  .image img {
+    max-width: 285px;
+  }
+}
+
+
 @media (max-width: 768px) {
   .image-container {
     flex-wrap: wrap;

@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
 
 .category-view-container {
-  min-height: 100vh;
   background-color: #CFC4C4;
   flex-direction: column;
   margin: 0;

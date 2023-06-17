@@ -80,8 +80,6 @@ export const ProductDetail = () => {
     setButtonText('Přidat do košíku');
   };
 
-  console.log(addedToCart);
-
   const handleChangeSize = (e) => {
     const newSize = e.target.value;
     setSize(newSize);

@@ -64,7 +64,28 @@
   padding: 10px;
 }
 
+
+
 /* Responsive Design */
+
+@media (min-width: 1800px) {
+  .footer-logo img {
+    width: 125px;
+  }
+
+  .footer-text li {
+    font-size: 20px;
+  }
+
+  .social-media {
+    font-size: 27px;
+  }
+
+  .footer-divider {
+    font-size: 16px;
+  }
+}
+
 
 @media (max-width: 768px) {
   .footer-container {

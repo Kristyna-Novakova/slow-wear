@@ -13,10 +13,6 @@
   margin: 0;
 }
 
-body {
-  min-height: 100vh;
-}
-
 html {
   font-family: 'Montserrat', sans-serif;
 
@@ -29,8 +25,11 @@ header {
   margin-top: 4rem;
 }
 
+section {
+  min-height: calc(100vh - 215px);
+}
+
 .section {
-  min-height: 100vh;
   background-color: var(--background-color);
   padding: 60px;
   color: var(--text);

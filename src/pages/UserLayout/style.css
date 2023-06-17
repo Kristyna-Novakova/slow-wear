@@ -1,11 +1,10 @@
 .user-page-section {
-  min-height: 100vh;
   background-color: var(--background-color);
   color: var(--text);
 }
 
 .user-detail-container {
-  min-height: 22vh;
+  height: 170px;
   width: 100%;
   background-color: #CFC4C4;
   display: flex;
@@ -93,7 +92,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 71vh;
+  min-height: calc(100vh - 215px);
   background-color: var(--background-color);
 }
 
