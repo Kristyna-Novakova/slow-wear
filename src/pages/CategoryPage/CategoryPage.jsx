@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './style.css';
 import { useCatalogue } from '../../lib/store';
@@ -7,6 +7,10 @@ import { Loading } from '../Loading/Loading';
 export const CategoryPage = () => {
   const catalogue = useCatalogue();
   const { categoryId } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!catalogue) {
     return (

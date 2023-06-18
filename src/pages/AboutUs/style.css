@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--background-color);
+  min-height: calc(100vh - 215px);
 }
 
 /* About Author */
