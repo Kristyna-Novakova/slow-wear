@@ -10,7 +10,11 @@ export const MainPage = () => {
 
   const handleScrollToSection = () => {
     if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      const offsetTop = sectionRef.current.offsetTop - 70;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
     }
   };
 
