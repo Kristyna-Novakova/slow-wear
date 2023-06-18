@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import jsonData from '../categories.json';
 import { persist, devtools } from 'zustand/middleware';
 import { getSession, login, logout } from './db';
 
@@ -29,7 +28,14 @@ export const computeTotalPrice = (cartItems, catalogue) =>
     0,
   );
 
-export const useCatalogue = create((set) => jsonData);
+export const useCatalogue = create((set) => {
+  fetch('/api/categories.json')
+    .then((response) => response.json())
+    .then((jsonData) => {
+      set(jsonData);
+    });
+});
+
 export const useShoppingCart = create(
   persist(
     devtools((set, get) => ({
