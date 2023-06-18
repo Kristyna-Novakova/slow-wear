@@ -90,7 +90,7 @@
 
 @media (max-width: 768px) {
   .author-page {
-    padding: 35px;
+    padding: 35px 30px;
   }
 
 
@@ -115,7 +115,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 
   .about h2 {
@@ -139,6 +138,10 @@
 /* Phone */
 
 @media (max-width: 460px) {
+  .author-page h1 {
+    font-size: 26px;
+  }
+
   .about {
     width: 70%;
   }

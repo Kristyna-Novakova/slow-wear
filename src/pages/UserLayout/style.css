@@ -182,7 +182,7 @@
 
   .information-container {
     flex-direction: column;
-    margin-right: 80px;
+    margin: 0;
     gap: 80px;
   }
 
@@ -209,5 +209,13 @@
 
   .login-section h2 {
     font-size: 24px;
+  }
+
+  .name {
+    font-size: 27px;
+  }
+
+  .section-list {
+    border-radius: 0;
   }
 }
