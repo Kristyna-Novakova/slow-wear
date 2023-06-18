@@ -106,6 +106,18 @@
     width: 100%;
   }
 
+  .about {
+    text-align: center;
+    width: 80%;
+  }
+
+  .about ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .about h2 {
     font-size: 18px;
   }

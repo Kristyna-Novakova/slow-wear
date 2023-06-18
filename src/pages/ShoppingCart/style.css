@@ -31,6 +31,10 @@
   max-width: 100%;
 }
 
+.item-image img:hover {
+  transform: scale(1.02);
+}
+
 .item-details {
   flex: 1;
 }
@@ -43,7 +47,10 @@
 .item-name {
   font-size: 18px;
   text-transform: uppercase;
+}
 
+.item-name:hover {
+  color: #818181;
 }
 
 .item-name,
@@ -67,6 +74,10 @@
   cursor: pointer;
   margin-top: 10px;
   margin-right: 10px;
+}
+
+.remove-button:hover {
+  background-color: #b1aba6;
 }
 
 .cart-summary {

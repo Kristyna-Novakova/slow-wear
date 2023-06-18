@@ -13,7 +13,9 @@ export const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <img src={logoSW} alt="logo" />
+          <Link to="/">
+            <img src={logoSW} alt="logo" />
+          </Link>
         </div>
         <ul className="footer-text">
           <li>

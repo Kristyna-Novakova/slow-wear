@@ -55,7 +55,7 @@
 }
 
 .section-list ul li {
-  padding: 20px 20px;
+  padding: 20px;
   list-style: none;
   text-align: center;
   text-transform: uppercase;
@@ -63,6 +63,10 @@
   border-bottom: 1px solid #cfc4c4;
   font-weight: bold;
   cursor: pointer;
+}
+
+.section-list ul li:hover {
+  color: #818181;
 }
 
 
@@ -75,6 +79,10 @@
   color: #555;
   width: 100%;
   display: block;
+}
+
+.section-list a:hover {
+  color: #818181;
 }
 
 .detail-information-container {
@@ -162,6 +170,15 @@
     padding: 0;
   }
 
+  .detail-information-container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name {
+    margin-left: 0;
+  }
 
   .information-container {
     flex-direction: column;

@@ -29,6 +29,13 @@
   max-width: 45vw;
 }
 
+.payment-text a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(---text);
+  cursor: pointer;
+}
+
 .qr-code {
   margin-bottom: 60px;
 }

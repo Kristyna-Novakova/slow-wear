@@ -12,6 +12,10 @@
   gap: 2rem;
 }
 
+.category-image-detail img:hover {
+  transform: scale(1.02);
+}
+
 .category-image-detail {
   flex: 0 0 33.33%;
   text-align: center;

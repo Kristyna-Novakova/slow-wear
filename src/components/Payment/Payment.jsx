@@ -37,8 +37,10 @@ export const Payment = (props) => {
       <h2 className="section-title">Platba</h2>
       <p className="payment-text">
         Projekt Slow Wear zatím nemá reálné zboží a nemůže přijímat objednávky.
-        Pokud si ale chcete připsat body za dobrou karmu a podpořit Nadační fond
-        Czechitas.
+        Pokud si ale chcete připsat body za dobrou karmu, můžete podpořit{' '}
+        <a href="https://www.nadacnifondczechitas.cz/" target="_blank">
+          Nadační fond Czechitas.
+        </a>
       </p>
       <div className="payment-details">
         <p>Adresát platby: Nadační fond Czechitas</p>
