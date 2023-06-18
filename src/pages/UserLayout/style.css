@@ -167,7 +167,7 @@
 @media (max-width: 768px) {
   .user-page-section {
     background-color: var(--background-color);
-    padding-bottom: 25px;
+    padding-bottom: 40px;
   }
 
   .user-detail-container {

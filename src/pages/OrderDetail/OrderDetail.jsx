@@ -51,7 +51,7 @@ export const OrderDetail = () => {
             cisloUctu="2202326673/2010"
             variabilniSymbol={orderId}
             castka={computeTotalPrice(data[0].items, catalogue)}
-            zprava="Děkujeme"
+            zprava="Děkujeme za podporu"
           />
         )}
       </section>

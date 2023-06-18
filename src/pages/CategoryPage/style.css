@@ -12,10 +12,6 @@
   gap: 2rem;
 }
 
-.category-image-detail img:hover {
-  transform: scale(1.02);
-}
-
 .category-image-detail {
   flex: 0 0 33.33%;
   text-align: center;
@@ -29,6 +25,11 @@
   max-width: max-content;
   height: auto;
   margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.category-image-detail img:hover {
+  transform: scale(1.02);
 }
 
 .category-image-detail h3 {

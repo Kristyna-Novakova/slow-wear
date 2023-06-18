@@ -19,6 +19,9 @@ export const getSession = async () => {
 export const login = async (provider) => {
   return await supabase.auth.signInWithOAuth({
     provider,
+    options: {
+      redirectTo: document.location.href,
+    },
   });
 };
 
