@@ -29,6 +29,7 @@
 
 .item-image img {
   max-width: 100%;
+  transition: transform 0.3s;
 }
 
 .item-image img:hover {
@@ -50,7 +51,7 @@
 }
 
 .item-name:hover {
-  color: #818181;
+  color: #555;
 }
 
 .item-name,
@@ -123,7 +124,6 @@
     width: 140px;
     margin-left: 0;
   }
-
 }
 
 
